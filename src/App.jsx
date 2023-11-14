@@ -1,3 +1,5 @@
+import { Route, Routes } from "react-router-dom"
+import News from "./components/News"
 
 
 function App() {
@@ -5,8 +7,8 @@ function App() {
   return (
     <>
     <div className="font-rl">
-      <h1>Hello milli app</h1>
-      </div>
+      <News/>
+    </div>
     </>
   )
 }

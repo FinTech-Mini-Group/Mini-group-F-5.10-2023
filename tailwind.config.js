@@ -25,8 +25,10 @@ export default {
       },
       backgroundColor : {
         bgmain : '#00B709',
-        bgblue : '#0F58E5',   
+        bgblue : '#0F58E5',
+        banner : ''   
       },
+     
       fontSize: {
         Body: ['16px', {
           fontWeight: 400,
@@ -49,7 +51,9 @@ export default {
           letterSpacing: 0
         }],
       },
-      
+      backgroundImage: {
+        banner : "url('src/assets/banner background.png')",
+      },
     },
   },
   plugins: [],
