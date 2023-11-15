@@ -26,7 +26,9 @@ export default {
       backgroundColor : {
         bgmain : '#00B709',
         bgblue : '#0F58E5',
-        button : '#6EFF75'   
+        button : '#6EFF75',
+        instruc : '#93B9D2',
+        change : '#ECECEC'   
       },
      
       fontSize: {
@@ -48,6 +50,10 @@ export default {
         }],
         Headingbig : ['48px', {
           fontWeight: 700,
+          letterSpacing: 0
+        }],
+        Instruct : ['48px' , {
+          fontWeight: 800,
           letterSpacing: 0
         }],
       },
