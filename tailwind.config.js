@@ -26,7 +26,7 @@ export default {
       backgroundColor : {
         bgmain : '#00B709',
         bgblue : '#0F58E5',
-        banner : ''   
+        button : '#6EFF75'   
       },
      
       fontSize: {
