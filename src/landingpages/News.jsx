@@ -20,7 +20,7 @@ function News() {
                     </div>
                   </div>
                 </div>
-                <div>
+                <div >
                   <img src={bannerimage} alt="" />
                 </div>
             </div>

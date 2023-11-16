@@ -17,18 +17,24 @@ export default {
       rl : ["'Raleway', sans-serif"]
       },
       colors : {
-        Cback : '#171515',
+        subtitle : '#171515',
+        subtitles : '#171515',
         Cmain : '#00B709',
         Cwhite :'#FAFAFA',
         Cwhites : '#FFF',
         Cblackk: '#000',
+        change : '#ECECEC',
       },
       backgroundColor : {
         bgmain : '#00B709',
         bgblue : '#0F58E5',
         button : '#6EFF75',
         instruc : '#93B9D2',
-        change : '#ECECEC'   
+        change : '#ECECEC',
+        Cbadge : '#F81D1D',
+        Cbanner : '#F0A719', 
+        Clayout : '#6EFF75',
+        Crect : '#FAFAFA',  
       },
      
       fontSize: {
