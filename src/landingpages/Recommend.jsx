@@ -8,10 +8,10 @@ import { icons } from '../utilits/icons'
 
 function Recommend() {
   return (
-    <div className='my-[50px] mx-[100px]'>
-        <h1 className='text-subtitle mb-[20px] '>Рекомендуем вам</h1>
-        <div className='flex justify-between'>
-            <div className='flex '>
+    <div className='lg:my-[50px] lg:mx-[100px]'>
+        <h1 className=' text-center lg:text-subtitle mb-[20px] lg:text-start '>Рекомендуем вам</h1>
+        <div className='lg:flex justify-between'>
+            <div className=' mb-[30px] lg:flex '>
                 <button className='py-[8px] px-[16px] rounded-[4px] bg-Cmain text-Body text-Cwhite mr-[20px]'>Товары со скидкой</button>
                 <button className='py-[8px] px-[16px] rounded-[4px] bg-change text-Body text-[#999]'>Топ продаж</button>
             </div>
@@ -20,7 +20,7 @@ function Recommend() {
                  <button className='p-[8px] bg-Clayout rounded-[4px] ml-[20px]'>{icons.arrowr}</button>
             </div>
         </div>
-        <div className='flex gap-8 mt-[20px] '>
+        <div className='lg:flex gap-8 mt-[20px] '>
              <div className='p-[20px] rounded-[5px] bg-[#FAFAFA] '>
                 <img className='' src={productcard} alt="" />
                 <div className=' my-[10px]'>

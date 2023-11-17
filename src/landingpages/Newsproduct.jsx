@@ -10,11 +10,11 @@ import { icons } from '../utilits/icons'
 function Newsproduct() {
   return (
     <div className='container'>
-        <div className=' flex justify-between mx-[100px] mb-[30px]'>
+        <div className=' lg:flex justify-between mx-[100px] mb-[30px]'>
             <button className='text-subtitle text-Cback ' >Новые товары</button>
             <button className='text-Body text-Cmain '>Все товары</button>
         </div>
-        <div className='flex gap-8 mx-[100px] '>
+        <div className='lg:flex gap-8 lg:mx-[100px] '>
              <div className='p-[20px] rounded-[5px] bg-[#FAFAFA] '>
                 <img className='' src={productcard} alt="" />
                 <div className=' my-[10px]'>

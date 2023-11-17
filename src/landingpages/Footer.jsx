@@ -4,7 +4,7 @@ import { icons } from '../utilits/icons'
 
 function Footer() {
   return (
-    <div className=' px-[100px] bg-Cwhite pt-[50px] flex justify-between'>
+    <div className=' lg:px-[100px] bg-Cwhite lg:pt-[50px] lg:flex justify-between'>
         <div>
             <h1 className='text-subtitle text-subtitles mb-[30px]'>Покупателям</h1>
             <p className='text-Body text-[#999999] mb-[15px] cursor-pointer '>Как сделать заказ</p>
