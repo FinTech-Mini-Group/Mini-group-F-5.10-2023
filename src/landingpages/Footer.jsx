@@ -12,7 +12,7 @@ function Footer() {
            {
             buyers.map((element, value) => {
                 return <li className='list-none mb-[15px]' key={value}>
-                    <Link className='  text-Body text-[#999999]'>{element.linkName}</Link>
+                    <Link to={'/zakaz'} className='  text-Body text-[#999999]'>{element.linkName}</Link>
                 </li>
             })
            }

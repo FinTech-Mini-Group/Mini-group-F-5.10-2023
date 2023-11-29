@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { icons } from '../utilits/icons'
 
 
 export const buyers = [
  {
-    linkName: "Как сделать заказ",
-    slug: "/Как сделать заказ",
+   linkName:" Как сделать заказ" ,
+    slug: "/zakaz",
  },   
  {
    linkName: "Способы оплаты",
