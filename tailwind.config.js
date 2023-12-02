@@ -62,6 +62,14 @@ export default {
           fontWeight: 800,
           letterSpacing: 0
         }],
+        Bodybold : ['16', {
+          fontWeight: 700,
+          letterSpacing: 0
+        }],
+        Bodysmall : ['12', {
+          fontWeight: 400,
+          letterSpacing: 0
+        }],
       },
       backgroundImage: {
         banner : "url('src/assets/banner background.png')",

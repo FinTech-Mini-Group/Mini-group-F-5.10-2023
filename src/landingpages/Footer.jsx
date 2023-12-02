@@ -6,13 +6,13 @@ import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
-    <div className=' lg:px-[100px] bg-Cwhite lg:pt-[50px] lg:flex justify-between'>
+    <div className=' container m-auto bg-Cwhite lg:pt-[50px] lg:flex justify-between'>
         <div>
             <h1 className='text-subtitle text-subtitles mb-[30px]'>Покупателям</h1>
            {
             buyers.map((element, value) => {
                 return <li className='list-none mb-[15px]' key={value}>
-                    <Link to={'/zakaz'} className='  text-Body text-[#999999]'>{element.linkName}</Link>
+                    <Link className='  text-Body text-[#999999]'>{element.linkName}</Link>
                 </li>
             })
            }
