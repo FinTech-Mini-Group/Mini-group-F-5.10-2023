@@ -3,7 +3,7 @@ import global from '../../assets/icons/global.svg'
 
 function HeaderTop() {
   return (
-    <div className='h-[50px] w-full flex items-center justify-between'>
+    <div className='h-[50px] w-full flex items-center justify-between font-rl'>
         <div className='flex px-20 py-2 gap-7 items-center '>
             <label htmlFor="">
                 <select name="" id="" className='bg-transparent border-none outline-none' >

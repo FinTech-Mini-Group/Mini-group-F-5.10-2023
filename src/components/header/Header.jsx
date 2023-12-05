@@ -7,14 +7,17 @@ import percent from "../../assets/icons/percentage-square.svg";
 import heart from "../../assets/icons/heart.svg";
 import cart from "../../assets/icons/shopping-cart.svg";
 import profile from "../../assets/icons/profile-circle.svg";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
+  const navigate=useNavigate();
+  
   return (
     <div>
       <HeaderTop />
-      <div className="border-t-2 border-[#999999] flex items-center justify-between px-10 py-1 ">
-        <img src={logo} alt="" />
-        <button className="bg-[#00B709] flex text-white gap-2 py-2 px-4 rounded-md items-center">
+      <div className="border-t-2 font-rl border-[#999999] flex items-center justify-between px-10 py-1 ">
+        <img onClick={()=>navigate("/")} src={logo} alt="" />
+        <button onClick={()=>navigate("/Catalog")} className="bg-[#00B709] flex text-white gap-2 py-2 px-4 rounded-md items-center">
           <img src={menu} alt="" /> Каталог
         </button>
         <form>
@@ -38,17 +41,17 @@ function Header() {
           </div>
         </form>
         <div className="flex gap-5">
-          <div className="flex gap-2 px-2 py-4">
+          <div className="flex gap-2 px-2 py-4 list-none">
             <img src={percent} />
-            <h3>Акции</h3>
+            <li>Акции</li>
           </div>
-          <div className="flex gap-2 px-2 py-4">
+          <div className="flex gap-2 px-2 py-4 list-none">
             <img src={heart} />
-            <h3>Избранные</h3>
+            <li>Избранные</li>
           </div>
-          <div className="flex gap-2 px-2 py-4">
+          <div className="flex gap-2 px-2 py-4 list-none">
             <img src={cart} />
-            <h3>Корзинка</h3>
+            <li>Корзинка</li>
           </div>
           <button className="border-2 border-[#00B709] p-1 rounded-md text-[#00B709] flex gap-2  items-center">
             <img src={profile} alt="" />
