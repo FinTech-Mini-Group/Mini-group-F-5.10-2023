@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 
 function Header() {
   const navigate=useNavigate();
-  
+  console.log("salom")
   return (
     <div>
       <HeaderTop />
