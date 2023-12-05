@@ -1,29 +1,18 @@
 import React from 'react'
-import { icons } from '../utilits/icons'
 import bannerimage from '../assets/banner image.png'
 import image9 from '../assets/image 9.png'
+import Carousel from '../components/Carousel'
+import { icons } from '../utilits/icons'
+
 
 function News() {
+  console.log('Swig')
   return (
     <div className=' lg:container lg:my-[50px] lg:w-full lg:flex justify-center m-auto'>
         <div className='lg:w-full lg:mr-[30px]'>
             <h1 className=' text-subtitle lg:text-Cback lg:text-subtitle lg:mb-[30px] lg:text-start '>Будьте в курсе происходящего</h1>
-            <div className='lg:flex justify-beetween items-center w-full bg-banner bg-no-repeat'>
-                <div className='lg:py-14 lg:px-24'>
-                  <h1 className='text-start  lg:text-TitleBold text-Cback mb-[20px] lg:text-start'>Тяжёлое машиностроение — это <br/> вам не песнь светлого будущего</h1>
-                  <p className='lg:text-Body text-Cback mb-[68px]'>Вот вам яркий пример современных тенденций — <br/> экономическая повестка сегодняшнего дня создаёт.</p>
-                  <button className='py-[8px] px-[16px] border-2 border-solid rounded-[4px] bg-bgmain text-white mb-[48px]'>Узнать больше</button>
-                  <div>
-                    <div className='flex items-center gap-10'>
-                      <span className='p-[8px] rounded-[4px] bg-[white]'>{icons.arrowleft}</span>
-                      <span className='p-[8px] rounded-[4px] bg-[white]'>{icons.arrowright}</span>
-                    </div>
-                  </div>
-                </div>
-                <div >
-                  <img src={bannerimage} alt="" />
-                </div>
-            </div>
+           
+           <Carousel/>
 
         </div>
         <div>

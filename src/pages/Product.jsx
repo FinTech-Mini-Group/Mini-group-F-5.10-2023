@@ -3,7 +3,9 @@ import { products } from '../landingpages/data'
 import { icons } from '../utilits/icons'
 
 function Products() {
+  console.log(products)
   return (
+    
     <div className='lg:flex gap-8 '>
           {
              products.map((element,value)=>
