@@ -19,11 +19,11 @@ import { icons } from '../utilits/icons'
 
 
 export const products=[
-{name:"Macbook Air 13 M1 8gb RAM / 256gb SSD storage", img:productcard, discount:"15", price:"1 727 019 ", old:"3 370 927"},
-{name:"Холодильник Samsung ARTRB-31FERNDWW", img:productcard1, discount:"15", price:"235 464 " , },
-{name:"Macbook Air 13 M1 8gb RAM / 256gbSSD storage", img:productcard2, discount:"15", price:"796 987 " , old:"2 643 982"},
-{name:"Macbook Air 13 M1 8gb RAM / 256gbSSD storage", img:productcard3, discount:"15", price:"1 906 625 " , old:"4 990 751"},
-{name:"Macbook Air 13 M1 8gb RAM / 256gbSSD storage", img:productcard4, discount:"15", price:"856 517 ", old:"2 011 941"},
+{name:"Macbook Air 13 M1 8gb RAM / 256gb SSD storage", img:productcard, discount:"15", price:"1 727 019 "},
+{name:"Холодильник Samsung ARTRB-31FERNDWW", img:productcard1, discount:"15%", price:"235 464 "},
+{name:"Macbook Air 13 M1 8gb RAM / 256gbSSD storage", img:productcard2, discount:"15", price:"796 987 "},
+{name:"Macbook Air 13 M1 8gb RAM / 256gbSSD storage", img:productcard3, discount:"15", price:"1 906 625 "},
+{name:"Macbook Air 13 M1 8gb RAM / 256gbSSD storage", img:productcard4, discount:"15", price:"856 517 "},
 ]
 export const category=[
     {name:"Электроника", img:elektronica, path:"electronic"},
@@ -41,9 +41,10 @@ export const category=[
 ]
 
 export const ekonom=[
-    {name:"Качество и экономия", names:"Comprehensive quality control and affordable prices", icons: icons.medalstar},
+    {name:"Качество и экономия", names:"Comprehensive quality control and affordable prices", icons: icons.medalstar , },
     {name:"Быстрая доставка", names:"Быстрая и удобная доставка от двери до двери", icons:icons.vuesax},
     {name:"Безопасность платежей", names:"Более 10 различных безопасных способов оплаты", icons:icons.shieldtick},
     {name:"Выгодные цены", names:"Цены пропорциональны рыночным ценам", icons:icons.moneys}, 
-    {name:"Есть вопросы?", names:"Круглосуточное обслуживание клиентов - мы здесь и рады помочь", icons:icons.message},   
+    {name:"Есть вопросы?", names:"Круглосуточное обслуживание клиентов - мы здесь и рады помочь", icons:icons.message}, 
+
 ]
