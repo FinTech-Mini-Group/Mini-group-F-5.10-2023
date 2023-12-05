@@ -9,7 +9,7 @@ function Change() {
            
            {
               ekonom.map((element,value)=>
-               <div className=' lg:justify-center lg:w-full lg:h-[400px]  bg-white  lg:pt-[102px]  lg:pb-[101px] rounded-[10px] '>
+               <div className=' lg:justify-center lg:w-full lg:h-[400px]  bg-white  lg:pt-[102px]  lg:pb-[101px] rounded-[10px]' key={value}>
                  <span className='flex justify-center'>{element.icons}</span>
                  <h1 className=' py-[10px] text-subtitle text-[#161010] text-center'>{element.name}</h1>
                  <p className='text-Body text-[#000000] text-center'>{element.names}</p>

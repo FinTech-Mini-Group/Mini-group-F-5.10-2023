@@ -17,11 +17,11 @@ function Newsproduct() {
                <div className='p-[20px] rounded-[5px] bg-[#FAFAFA] '>
              <img className='' src={element.img} alt="" />
                 <div className=' my-[10px]'>
-                    <button className='py-[5px] px-[8px] rounded-[4px] bg-Cbadge text-white mr-[10px]'>-15% скидка</button>
+                    <button className='py-[5px] px-[8px] rounded-[4px] bg-Cbadge text-white mr-[10px]'>{element.discount} % скидка</button>
                     <button className='py-[5px] px-[8px] rounded-[4px] bg-bgblue text-white'>Супер цена</button>
                 </div>
                 <p className='mb-[10px] text-Body text-Cback'>{element.name}</p>
-                <p className='text-Bodystrik text-[#999] line-through '>3 370 927 сум</p>
+                <p className='text-Bodystrik text-[#999] line-through '>{element.old} сум</p>
                 <p className='text-subtitle !text-[#00B709]'>{element.price}сум</p>
                 <p className=' mx-[10px] my-[10px] border-[1px] border-solid w-[260px] bg-change'></p>
                 <div className='flex'>
