@@ -16,14 +16,17 @@ import mujchinam from '../assets/Rectangle 654.png'
 import jenshinam from '../assets/Rectangle 655.png'
 import obuv from '../assets/Rectangle 656.png'
 import { icons } from '../utilits/icons'
+import samakat from '../assets/Rectangle 626.png'
+import iphone from '../assets/Rectangle 626 (1).png'
+import washing from '../assets/Rectangle 626 (2).png'
 
 
 export const products=[
-{name:"Macbook Air 13 M1 8gb RAM / 256gb SSD storage", img:productcard, discount:"15", price:"1 727 019 "},
-{name:"Холодильник Samsung ARTRB-31FERNDWW", img:productcard1, discount:"15%", price:"235 464 "},
-{name:"Macbook Air 13 M1 8gb RAM / 256gbSSD storage", img:productcard2, discount:"15", price:"796 987 "},
-{name:"Macbook Air 13 M1 8gb RAM / 256gbSSD storage", img:productcard3, discount:"15", price:"1 906 625 "},
-{name:"Macbook Air 13 M1 8gb RAM / 256gbSSD storage", img:productcard4, discount:"15", price:"856 517 "},
+{name:"Macbook Air 13 M1 8gb RAM / 256gb SSD storage", img:productcard, discount:"15", price:"1 727 019 ", old:"3 370 927"},
+{name:"Холодильник Samsung ARTRB-31FERNDWW", img:productcard1, discount:"15", price:"235 464 "},
+{name:"Macbook Air 13 M1 8gb RAM / 256gbSSD storage", img:productcard2, discount:"15", price:"796 987 " , old:"2 643 982"},
+{name:"Macbook Air 13 M1 8gb RAM / 256gbSSD storage", img:productcard3, discount:"15", price:"1 906 625 " , old:"4 990 751" },
+{name:"Macbook Air 13 M1 8gb RAM / 256gbSSD storage", img:productcard4, discount:"15", price:"856 517 " ,  old:"2 011 941"},
 ]
 export const category=[
     {name:"Электроника", img:elektronica, path:"electronic"},
@@ -47,4 +50,10 @@ export const ekonom=[
     {name:"Выгодные цены", names:"Цены пропорциональны рыночным ценам", icons:icons.moneys}, 
     {name:"Есть вопросы?", names:"Круглосуточное обслуживание клиентов - мы здесь и рады помочь", icons:icons.message}, 
 
+]
+
+export const zakaz=[
+    {name: "Xiaomi Mi Electric Scooter 3 до 100 кг", img:samakat, price: "9 720 000", number: "2"},
+    {name: "IPhone 13 Pro Max", img:iphone, price: "13 500 000 ", number: "1"},
+    {name: "Стиральная машина Samsung WW80J6210CS", img:washing, price: "6 560 000 ", number: "2"},
 ]

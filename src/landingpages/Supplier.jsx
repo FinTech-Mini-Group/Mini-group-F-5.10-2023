@@ -11,7 +11,7 @@ function Supplier() {
         </div>
         <div>
              <h1 className='mt-[25px] text-center text-Headingbig text-subtitles mb-[20px] lg:text-start '>Стать поставщиком на Milli</h1>
-             <p className=' text-subtitle text-subtitles text-center lg:text-subtitle lg:text-subtitle mb-[40px] lg:text-start'>Продавайте свои товары и продукты удобно и <br/> легко на нашей оптовой платформе.</p>
+             <p className=' text-subtitle text-subtitles text-center lg:text-subtitle lg:text-subtitles mb-[40px] lg:text-start'>Продавайте свои товары и продукты удобно и <br/> легко на нашей оптовой платформе.</p>
              <button className='py-[8px] px-[16px] bg-bgmain rounded-[4px] text-Cwhite'>Стать поставщиком</button>
         </div>
     </div>
