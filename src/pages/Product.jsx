@@ -1,16 +1,18 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import { products } from '../landingpages/data'
 import { icons } from '../utilits/icons'
 
 function Products() {
+  const navigate=useNavigate()
   console.log(products)
   return (
     
     <div className='lg:flex gap-8 '>
           {
              products.map((element,value)=>
-               <div className='p-[20px] rounded-[5px] bg-[#FAFAFA] ' key={value}>
-             <img className='' src={element.img} alt="" />
+               <div  className='p-[20px] rounded-[5px] bg-[#FAFAFA] cursor-pointer '  key={value}  >
+             <img onClick={()=>navigate(`/${element.path}`)} className='' src={element.img} alt="" />
                 <div className=' my-[10px]'>
                     <button className='py-[5px] px-[8px] rounded-[4px] bg-Cbadge text-white mr-[10px]'>{element.discount} % скидка</button>
                     <button className='py-[5px] px-[8px] rounded-[4px] bg-bgblue text-white'>Супер цена</button>
