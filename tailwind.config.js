@@ -24,6 +24,8 @@ export default {
         Cwhites : '#FFF',
         Cblackk: '#000',
         change : '#ECECEC',
+        brand :  '#999999',
+        
       },
       backgroundColor : {
         bgmain : '#00B709',
