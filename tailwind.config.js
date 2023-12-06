@@ -72,6 +72,10 @@ export default {
           fontWeight: 400,
           letterSpacing: 0
         }],
+        CTop : ['12', {
+          fontWeight: 600,
+          letterSpacing: 0
+        }],
       },
       backgroundImage: {
         banner : "url('src/assets/banner background.png')",
