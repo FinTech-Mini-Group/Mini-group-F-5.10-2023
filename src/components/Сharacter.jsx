@@ -1,4 +1,5 @@
 import React from 'react'
+import Shop from './Shop'
 
 export default function Сharacter(props) {
     
@@ -172,7 +173,8 @@ export default function Сharacter(props) {
          <p className='border-dotted border-[1px] w-[100%] h-0'></p>
          <p className='text-Bodybold'>1.29кг</p>   
       </div>  
-
+      <p className='text-Bodybold text-Cmain'>Показать меньше</p>
+         <Shop/>
     </div>
   )
 }
