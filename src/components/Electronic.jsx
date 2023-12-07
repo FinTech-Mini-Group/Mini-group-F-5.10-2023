@@ -1,13 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import product1 from '../assets/Product images.png'
 import product2 from '../assets/Rectangle 623.png'
 import product3 from '../assets/Rectangle 624.png'
 import product4 from '../assets/Rectangle 625.png'
 import product5 from '../assets/Rectangle 627.png'
-import { icons } from '../utilits/icons'
-function Electronic() {
+import { icons } from '../utilits/icons';
+import Description from './Description'
+import Character from './Сharacter';
 
-
+export default function Electronic() {
+ 
+  const tabsMenu = ['Все характеристики товара', 'Описание', 'Отзывы покупателей (21)', 'Вопросы (2)',]
+  const [activeTabs, setActiveTabs] = useState('Все характеристики товара')
+ 
+  console.log(activeTabs)
   return (
      <div className='container m-auto'>
       <h1 className='text-subtitle'>Ноутбук Apple Macbook Air 13 2020 / M1 / 8GB / 256GB / Apple graphics 7-core, серебристый</h1>
@@ -105,8 +111,21 @@ function Electronic() {
           </div>
         </div>
       </div>
+        <ul className='flex my-5'>
+         {
+              tabsMenu.map((element, value) => {
+                return (
+                  <li  key={value} onClick={() => setActiveTabs(element)} ><button className={activeTabs === element ? 'list-none py-2 px-4 rounded-[4px] border-[1px] border-solid mr-5 text-Body text-brand hover:bg-bgmain hover:text-Cwhite ' :
+                  'list-none py-2 px-4 rounded-[4px] border-[1px] border-solid mr-5 text-Body text-brand hover:bg-bgmain hover:text-Cwhite '}>{element}</button></li>
+                )
+              })
+            }
+           
+         </ul>   
+            <Character title={activeTabs} />
+            <Description title={activeTabs} />
     </div>
   )
 }
 
-export default Electronic
+ 
