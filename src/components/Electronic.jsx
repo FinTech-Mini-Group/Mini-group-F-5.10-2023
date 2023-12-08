@@ -6,6 +6,8 @@ import product4 from '../assets/Rectangle 625.png'
 import product5 from '../assets/Rectangle 627.png'
 import { icons } from '../utilits/icons';
 import Description from './Description'
+import Question from './Question'
+import Reviews from './Reviews'
 import Character from './Сharacter';
 
 export default function Electronic() {
@@ -124,6 +126,8 @@ export default function Electronic() {
          </ul>   
             <Character title={activeTabs} />
             <Description title={activeTabs} />
+            <Question title={activeTabs} />
+            <Reviews title={activeTabs} />
     </div>
   )
 }
