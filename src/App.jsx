@@ -9,10 +9,11 @@ import Zakaz from "./Footermenu/Zakaz"
 
 function App() {
   const [activeTabs, setActiveTabs] = useState(false)
+  const [showModal, setShowModal] = useState(false);
   return (
     <>
       <div className="font-rl">
-        <Contexts.Provider>
+        <Contexts.Provider value={{showModal, setShowModal}}>
         <Routes>
           <Route path='/zakaz' element={<Zakaz />} />
           <Route path='/' element={<Landing />} />

@@ -8,12 +8,15 @@ import { icons } from '../utilits/icons';
 import Description from './Description'
 import Question from './Question'
 import Reviews from './Reviews'
+import Share from './Share'
 import Character from './Сharacter';
 
 export default function Electronic() {
  
   const tabsMenu = ['Все характеристики товара', 'Описание', 'Отзывы покупателей (21)', 'Вопросы (2)',]
   const [activeTabs, setActiveTabs] = useState('Все характеристики товара')
+  const [showModal, setShowModal]= useState(false)
+  const handleClose = () => setShowModal(false)
  
   console.log(activeTabs)
   return (
@@ -82,7 +85,8 @@ export default function Electronic() {
           <div className='p-[20px] border-[1px] border-solid rounded-[4px] w-[407px]'>
             <div className='flex items-center'>
               <p className='text-subtitle mr-[73px]'>25 000 000 сум</p>
-              <button className='p-[10px] border-[1px] border-solid rounded-[4px] mr-5'>{icons.share}</button>
+              <button onClick={()=>setShowModal(true)} className='p-[10px] border-[1px] border-solid rounded-[4px] mr-5'>{icons.share}</button>
+             
               <button className='p-[10px] border-[1px] border-solid rounded-[4px]'>{icons.heart}</button>
             </div>
             <p className='text-Bodystrik line-through'>30 000 000  <span className='text-Body'>сум</span></p>
@@ -128,6 +132,7 @@ export default function Electronic() {
             <Description title={activeTabs} />
             <Question title={activeTabs} />
             <Reviews title={activeTabs} />
+            <Share onClose={handleClose} visible={showModal}/>
     </div>
   )
 }
