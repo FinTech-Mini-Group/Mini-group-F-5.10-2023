@@ -81,6 +81,7 @@ export default {
         banner : "url('src/assets/banner background.png')",
         banner2 : "url('src/assets/banner background2.png')",
         banner3 : "url('src/assets/banner background3.png')",
+        computerimage : "url('src/assets/Rectangle 671.png')",
       },
     },
   },

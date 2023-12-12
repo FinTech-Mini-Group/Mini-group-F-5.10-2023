@@ -47,7 +47,7 @@ export const Partnyor = [
 
 export const company = [
 {
-   linkName: "О нас",
+   linkName: <Link to={'/AboutUs'}>О нас</Link>,
    slug: "/О нас",
 },
 {

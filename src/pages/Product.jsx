@@ -8,11 +8,11 @@ function Products() {
   console.log(products)
   return (
     
-    <div className='lg:flex gap-8 '>
+    <div className='lg:flex justify-between gap-4 w-full'>
           {
              products.map((element,value)=>
                <div  className='p-[20px] rounded-[5px] bg-[#FAFAFA] cursor-pointer '  key={value}  >
-             <img onClick={()=>navigate(`/${element.path}`)} className='' src={element.img} alt="" />
+             <img onClick={()=>navigate(`/${element.path}`)} className='w-full' src={element.img} alt="" />
                 <div className=' my-[10px]'>
                     <button className='py-[5px] px-[8px] rounded-[4px] bg-Cbadge text-white mr-[10px]'>{element.discount} % скидка</button>
                     <button className='py-[5px] px-[8px] rounded-[4px] bg-bgblue text-white'>Супер цена</button>

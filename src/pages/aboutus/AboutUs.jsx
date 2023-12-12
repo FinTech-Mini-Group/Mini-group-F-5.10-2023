@@ -10,15 +10,17 @@ import delivery from "../../assets/newsicon/image 24.svg";
 import adidas from "../../assets/newsicon/image 25.svg";
 import pens from "../../assets/newsicon/Rectangle 661.svg";
 import instagram from "../../assets/newsicon/image 26.svg";
+import Change from "../../landingpages/Change";
+import Footer from "../../landingpages/Footer";
 
 
 function AboutUs() {
   return (
     <div>
-      <div className="mx-[60px] my-[50px] ">
+      <div className=" container m-auto my-[50px] ">
         <h1 className="py-2 pl-10 font-rl text-medium">О нас</h1>
         <div className="px-[100px]">
-          <div className="bg-computer-image bg-cover  h-[680px] pt-25 mt-[30px]">
+          <div className="bg-computerimage bg-cover  h-[680px] pt-25 mt-[30px]">
             <h2 className="text-white font-rl pt-[100px] pl-[100px] text-[24px]  ">
               Мы продаём товары для дома, работы и отдыха. <br />
               Наши клиенты: мелкие и крупные оптовики, <br />
@@ -53,7 +55,7 @@ function AboutUs() {
           </div>
         </div>
       </div>
-      <div className="mx-[100px]">
+      <div className=" container m-auto mb-[100px]">
         <h1 className="text-Bold">Наши партнеры</h1>
         <div className=" mt-[35px] grid grid-cols-6 gap-[30px] ">
           <div className="bg-white flex items-center justify-center py-[93px] border border-bggrey rounded-[10px]">
@@ -77,7 +79,10 @@ function AboutUs() {
         </div>
       </div>
       <div></div>
-      <div className="m-[100px]">
+
+      <Change/>
+
+      <div className="container m-auto ">
         <h1 className="text-Bold">Новости</h1>
         
         <div className=" mt-[35px] grid grid-cols-5 gap-[30px] ">
@@ -115,6 +120,7 @@ function AboutUs() {
           
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
