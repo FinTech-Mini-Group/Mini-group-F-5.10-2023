@@ -1,5 +1,9 @@
+
+import Header from "./components/header/Header";
+import {Routes, Route } from 'react-router-dom'
+import AboutUs from "./pages/aboutus/AboutUs";
+import Catalog from "./components/Catalog";
 import { useState } from "react"
-import { Route, Routes } from "react-router-dom"
 import Electronic from "./components/Electronic"
 
 import Landing from "./components/Landing"
@@ -14,13 +18,15 @@ function App() {
     <>
       <div className="font-rl">
         <Contexts.Provider value={{showModal, setShowModal}}>
+           <Header/>
         <Routes>
           <Route path='/zakaz' element={<Zakaz />} />
           <Route path='/' element={<Landing />} />
+             <Route path="Aboutus" element={<AboutUs/>}/>
+        <Route path="Catalog" element={<Catalog/>}/>
           <Route path='/electronic' element={<Electronic/>} />
         </Routes>
         </Contexts.Provider>
-       
       </div>
     </>
   )
