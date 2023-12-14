@@ -14,7 +14,7 @@ function Signin() {
           </form> 
           <div className='flex justify-between my-8'>
             <div className='flex items-center'>
-              <input className='mr-[10px] text-Cmain' type="checkbox" />
+              <input className='mr-[10px] w-[20px] h-[20px] bg-Cmain' type="checkbox" />
               <p className='text-Bodysmall' >Запомнить меня</p>
             </div>
             <div>
@@ -25,7 +25,7 @@ function Signin() {
           
           <p onClick={()=>navigate('/Signup')} className='mt-8 text-Bodysmall text-Cmain cursor-pointer'> <span className='text-Bodysmall text-brand'>У вас нет аккаунта?</span>Зарегистрируйтесь</p>
     </div>
-    <Footer/>
+
 </div>
 
   )

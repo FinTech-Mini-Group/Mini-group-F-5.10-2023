@@ -11,6 +11,7 @@ import { Contexts } from "./context/Contexts"
 import Zakaz from "./Footermenu/Zakaz"
 import Signup from "./components/Signup";
 import Signin from "./components/Signin";
+import Footer from "./landingpages/Footer";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
             <Route path='/signup' element={<Signup/>} />
             <Route path='/signin' element={<Signin/>} />
           </Routes>
+          <Footer/>
         </Contexts.Provider>
       </div>
     </>

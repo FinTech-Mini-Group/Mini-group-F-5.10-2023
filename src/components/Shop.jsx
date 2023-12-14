@@ -51,7 +51,7 @@ function Shop() {
           </div>
           </div>
           <Products/>
-          <Footer/>
+  
     </div>
   )
 }

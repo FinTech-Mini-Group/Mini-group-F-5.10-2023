@@ -18,7 +18,7 @@ function Zakaz() {
         </div> 
              <Total/>
     </div>
-    <Footer/>
+\
   </>
   )
 }
