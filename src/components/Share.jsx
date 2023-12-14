@@ -4,7 +4,7 @@ import { icons } from '../utilits/icons';
 
 function Share() {
   const [isOpen, setIsOpen] = useState(false)
-
+ 
   return (
     <div className='relative'>
       <button onClick={() => setIsOpen(true)} className='p-[10px] border-[1px] border-solid rounded-[4px] mr-5'>{icons.share}</button>
@@ -26,7 +26,7 @@ function Share() {
                 <p className='text-Body'>Instagram</p>
               </div>
             </div>
-            <button >X</button>
+          
           </div>
         </div>
       )}
