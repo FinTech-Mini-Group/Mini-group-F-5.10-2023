@@ -14,7 +14,7 @@ function Registrations() {
               <input required className='py-4 px-5 text-Body text-brand rounded-[4px]'  type="password" placeholder='Подтвердить пароль'/>
               </form> 
               <div className='flex items-center my-4 '>
-                  <input className='mr-[10px] !w-5 !h-5  text-Cmain' type= "checkbox" />
+                  <input className='mr-[10px] w-[30px] h-[30px] text-Cmain' type= "checkbox" />
                   <p className='text-Bodysmall' ><span>Я согласен с</span>политикой конфиденциальности и условиями <span>пользование.</span> </p>
               </div>
               <button className='py-2 px-4  rounded-[4px] text-center text-Body text-Cwhite bg-bgmain w-[100%]'>Войти</button>

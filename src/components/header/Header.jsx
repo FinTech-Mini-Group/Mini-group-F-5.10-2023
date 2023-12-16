@@ -51,7 +51,7 @@ function Header() {
           </div>
           <div className="flex gap-2 px-2 py-4 list-none">
             <img src={cart} />
-            <li className="">Корзинка</li>
+            <li className="" onClick={()=>navigate('/Basket')}>Корзинка</li>
           </div>
           <button onClick={()=>navigate("/Signin")} className="border-2 border-[#00B709] py-2 px-4 rounded-md text-[#00B709] flex gap-2  items-center">
             <img src={profile} alt="" />

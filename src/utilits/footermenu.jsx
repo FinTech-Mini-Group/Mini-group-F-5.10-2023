@@ -4,7 +4,7 @@ import { icons } from '../utilits/icons'
 
 export const buyers = [
  {
-   linkName:<Link to={'/zakaz'}>Как сделать заказ</Link>,
+   linkName:<Link to={'/'}>Как сделать заказ</Link>,
     slug: "/zakaz",
  },   
  {

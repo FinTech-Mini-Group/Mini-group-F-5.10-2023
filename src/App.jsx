@@ -12,12 +12,14 @@ import Zakaz from "./Footermenu/Zakaz"
 import Signup from "./components/Signup";
 import Signin from "./components/Signin";
 import Footer from "./landingpages/Footer";
+import Basket from "./components/Basket";
 
 
 function App() {
   const [activeTabs, setActiveTabs] = useState(false)
   const [showModal, setShowModal] = useState(false);
   const [isOpen, setIsOpen]=useState(false) 
+
   return (
     <>
       <div className="font-rl">
@@ -31,6 +33,7 @@ function App() {
             <Route path='/electronic' element={<Electronic />} />
             <Route path='/signup' element={<Signup/>} />
             <Route path='/signin' element={<Signin/>} />
+            <Route path='/basket' element={<Basket/>} />
           </Routes>
           <Footer/>
         </Contexts.Provider>
