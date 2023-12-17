@@ -60,8 +60,8 @@ export const ekonom = [
 ]
 
 export const zakaz = [
-    { name: "Xiaomi Mi Electric Scooter 3 до 100 кг", img: samakat, price: "9 720 000", number: "2", colour: 'Pacific Blue', shop:''},
-    { name: "IPhone 13 Pro Max", img: iphone, price: "13 500 000 ", number: "1" , colour: 'Pacific Blue', colour: 'светло-серый', shop:''},
-    { name: "Стиральная машина Samsung WW80J6210CS", img: washing, price: "6 560 000 ", number: "2", colour: 'серый', shop:'' },
-    { name: "Набор инструментов WMC tools 1034", img: tool, price: "645 000 ", number: "2", colour: 'серый', shop:''},
+    { name: "Xiaomi Mi Electric Scooter 3 до 100 кг", img: samakat, price: "9 720 000", number: "2", colour: 'Pacific Blue', shop:' MacBro'},
+    { name: "IPhone 13 Pro Max", img: iphone, price: "13 500 000 ", number: "1" , colour: 'Pacific Blue', colour: 'светло-серый', shop:'AZBO'},
+    { name: "Стиральная машина Samsung WW80J6210CS", img: washing, price: "6 560 000 ", number: "2", colour: 'серый', shop:'Texnomart*' },
+    { name: "Набор инструментов WMC tools 1034", img: tool, price: "645 000 ", number: "2", colour: 'серый', shop:'Texnomart*'},
 ]
