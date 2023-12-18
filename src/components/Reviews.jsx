@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { icons } from '../utilits/icons'
 import Rating from '../assets/Frame 648.png'
 import Shop from './Shop'
+import Rewiess from './Rewiess'
 function Reviews(props) {
+  const [showmodal , setShowModal] = useState(false)
+  const handleOnclose = () => setShowModal(false)
   return (
+
     <div className={props.title === 'Отзывы покупателей (21)' ? 'block' : 'hidden'}>
        <div className='flex'>
         <h1 className='text-Bodybold mr-[700px]'>Здесь пока нет комментарий, будьте первыми!</h1>
-        <button className='flex py-2 px-4 bg-bgmain rounded-[4px] text-Body text-Cwhite'><span className='mr-[10px]'>{icons.magicpen}</span>Оставить</button>
+        <button onClick={()=>setShowModal(true)} className='flex py-2 px-4 bg-bgmain rounded-[4px] text-Body text-Cwhite'><span className='mr-[10px]'>{icons.magicpen}</span>Оставить</button>
        </div>
        <div className='flex mt-[40px]'>
         <div className='mr-[200px]'>
@@ -53,6 +57,7 @@ function Reviews(props) {
             <button className='flex py-2 px-4 border-[1px] border-solid rounded-[4px] hover:bg-bgmain '>Следующее <span>{icons.arrowr}</span></button>
           </div>
        <Shop/>
+       <Rewiess onClose={handleOnclose} visible={showmodal}/>
     </div>
   )
 }
