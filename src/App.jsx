@@ -2,7 +2,7 @@
 import Header from "./components/header/Header";
 import {Routes, Route } from 'react-router-dom'
 import AboutUs from "./pages/aboutus/AboutUs";
-import Catalog from "./components/Catalog";
+import Catalog from "./components/catalog/Catalog";
 import { useState } from "react"
 import Electronic from "./components/Electronic"
 

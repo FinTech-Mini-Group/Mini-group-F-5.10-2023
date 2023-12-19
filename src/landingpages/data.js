@@ -57,3 +57,6 @@ export const zakaz=[
     {name: "IPhone 13 Pro Max", img:iphone, price: "13 500 000 ", number: "1"},
     {name: "Стиральная машина Samsung WW80J6210CS", img:washing, price: "6 560 000 ", number: "2"},
 ]
+
+
+
