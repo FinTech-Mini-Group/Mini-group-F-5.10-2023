@@ -4,7 +4,7 @@ import stars from "../assets/Stars.png"
 function Rewiess({visible , onClose}) {
     if(!visible) return null
   return (
-    <div className='fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center '>
+    <div className='fixed z-50 inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center '>
         <div className='bg-[#FFFFFF] p-[30px] rounded-[10px]'>
                 <h1 className='text-subtitle mb-5'>Написать отзыв</h1>
                    <form className='grid gap-3 ' action="">
