@@ -1,0 +1,14 @@
+.carousel_two .swiper-slide {
+    font-size: 18px;
+    background: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px !important;
+
+}
+
+.carousel_two .swiper-wrapper {
+    width: 500px !important;
+}
