@@ -12,6 +12,7 @@ import Sport from "./Sport";
 import TVs from "./TVs";
 import { useState } from "react";
 import rightArrow from "../../assets/icons/arrow-right.svg"
+import { icons } from "../../utilits/icons";
 
 
 function Catalog() {
@@ -30,20 +31,23 @@ function Catalog() {
   ];
   const [activeCatalogMenu,setCatalogMenu] = useState('Телефоны и гаджеты')
 
-  return <div className="container">
-  <div className="flex">
+  return <div className="container m-auto">
+  <div className="flex items-start">
   <div className="mr-[100px]">
-  <ul className=" max-w-4xl bg-Crect text-Body font-semibold py-6">
+    <aside>
+
+    <ul className=" bg-Crect text-Body font-semibold py-6">
     {
       catalogMenu.map((element, value) => {
         return (
-          <li  key={value} onClick={() => setCatalogMenu(element)} ><button className={activeCatalogMenu === element ? 'list-none py-2 px-4   mr-5  hover:bg-Cmain hover:text-Cwhites ' :
-          'list-none py-2 px-4  mr-5  hover:bg-Cmain hover:text-Cwhites '}>{element} <img className="inline" src={rightArrow} alt="" /></button></li>
+          <li  key={value} onClick={() => setCatalogMenu(element)} ><button className={activeCatalogMenu === element ? ' py-4 px-4 flex items-start    hover:bg-Cmain hover:text-Cwhites ' :
+          '  py-4 px-4  flex items-start hover:bg-Cmain hover:text-Cwhites '}>{element} <span>{icons.RightArrow}</span></button></li>
           )
         })
       }
+        </ul>
+    </aside>
       
-  </ul>
   </div>
   <div>
     <MobilePhones title={activeCatalogMenu}/>
