@@ -65,3 +65,6 @@ export const zakaz = [
     { name: "Стиральная машина Samsung WW80J6210CS", img: washing, price: "6 560 000 ", number: "2", colour: 'серый', shop:'Texnomart*' },
     { name: "Набор инструментов WMC tools 1034", img: tool, price: "645 000 ", number: "2", colour: 'серый', shop:'Texnomart*'},
 ]
+
+
+
