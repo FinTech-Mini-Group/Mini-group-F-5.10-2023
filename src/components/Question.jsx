@@ -72,7 +72,7 @@ export default function Question(props) {
           </div>
           </div>
           <Products/>
-          <Footer/>
+       
     </div>
   )
 }

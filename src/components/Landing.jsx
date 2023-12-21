@@ -20,7 +20,7 @@ function Landing() {
         <Instructiontwo/>
         <Recommend/>
         <Supplier/>
-        <Footer/>
+    
     </div>
   )
 }

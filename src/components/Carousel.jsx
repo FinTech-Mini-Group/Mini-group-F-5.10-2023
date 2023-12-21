@@ -27,7 +27,7 @@ function Carousel() {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <div className='lg:flex justify-beetween items-center bg-banner bg-no-repeat'>
+                    <div className='lg:flex justify-beetween w-full items-center bg-banner bg-no-repeat'>
                         <div className='lg:py-14 lg:px-24'>
                             <h1 className='text-start  lg:text-TitleBold text-Cback mb-[20px] lg:text-start'>Тяжёлое машиностроение — это <br /> вам не песнь светлого будущего</h1>
                             <p className='lg:text-Body text-Cback mb-[68px]'>Вот вам яркий пример современных тенденций — <br /> экономическая повестка сегодняшнего дня создаёт.</p>
