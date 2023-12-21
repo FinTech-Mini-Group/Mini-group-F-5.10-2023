@@ -28,39 +28,41 @@ function Catalog() {
     "Спорт и увлечение",
     "Игровые приставки",
   ];
-  const [activeCatalogMenu,setCatalogMenu] = useState('Телефоны и гаджеты')
+  const [activeCatalogMenu, setCatalogMenu] = useState('Телефоны и гаджеты')
 
-  return <div className="container">
-  <div className="flex">
-  <div className="mr-[100px]">
-  <ul className=" max-w-4xl bg-Crect text-Body font-semibold py-6">
-    {
-      catalogMenu.map((element, value) => {
-        return (
-          <li  key={value} onClick={() => setCatalogMenu(element)} ><button className={activeCatalogMenu === element ? 'list-none py-2 px-4   mr-5  hover:bg-Cmain hover:text-Cwhites ' :
-          'list-none py-2 px-4  mr-5  hover:bg-Cmain hover:text-Cwhites '}>{element} <img className="inline" src={rightArrow} alt="" /></button></li>
-          )
-        })
-      }
-      
-  </ul>
-  </div>
-  <div>
-    <MobilePhones title={activeCatalogMenu}/>
-    <HomeAppliances title={activeCatalogMenu}/>
-    <TVs title={activeCatalogMenu}/>
-    <ComputerTechnology title={activeCatalogMenu}/>
-    <ChildrenProducts title={activeCatalogMenu}/>
-    <PhotoVideo title={activeCatalogMenu}/>
-    <Electrics title={activeCatalogMenu}/>
-    <BeautyHealth title={activeCatalogMenu}/>
-    <Sport title={activeCatalogMenu}/>
-    <Gaming title={activeCatalogMenu}/>
-    <OfficeEquipment title={activeCatalogMenu}/>  
-    </div>
+  return <div className="container m-auto">
+    <div className="flex">
+      <div className="">
+        <ul className="min-w-[18rem] bg-Crect text-Body font-semibold py-6">
+          {
+            catalogMenu.map((element, value) => {
+              return (
+                <li key={value} onClick={() => setCatalogMenu(element)} >
+                  <button className={'w-full flex items-center justify-between list-none py-5 px-4 mr-5 hover:bg-Cmain hover:text-Cwhites '}>
+                    {element} <img className="inline" src={rightArrow} alt="" />
+                  </button>
+                </li>
+              )
+            })
+          }
+        </ul>
       </div>
+      <div className="px-14">
+        <MobilePhones title={activeCatalogMenu} />
+        <HomeAppliances title={activeCatalogMenu} />
+        <TVs title={activeCatalogMenu} />
+        <ComputerTechnology title={activeCatalogMenu} />
+        <ChildrenProducts title={activeCatalogMenu} />
+        <PhotoVideo title={activeCatalogMenu} />
+        <Electrics title={activeCatalogMenu} />
+        <BeautyHealth title={activeCatalogMenu} />
+        <Sport title={activeCatalogMenu} />
+        <Gaming title={activeCatalogMenu} />
+        <OfficeEquipment title={activeCatalogMenu} />
+      </div>
+    </div>
 
-      </div>;
+  </div>;
 }
 
 export default Catalog;
