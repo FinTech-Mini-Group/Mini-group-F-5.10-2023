@@ -9,8 +9,8 @@ import { icons } from '../utilits/icons'
 function News() {
   console.log('Swig')
   return (
-    <div className=' lg:container lg:my-[50px] lg:w-full lg:flex justify-center m-auto'>
-        <div className='lg:w-full lg:mr-[30px]'>
+    <div className=' lg:container lg:my-[50px] lg:w-full lg:flex justify-center gap-8 m-auto'>
+        <div className='lg:w-full'>
             <h1 className=' text-subtitle lg:text-Cback lg:text-subtitle lg:mb-[30px] lg:text-start '>Будьте в курсе происходящего</h1>
            <Carousel/>
         </div>

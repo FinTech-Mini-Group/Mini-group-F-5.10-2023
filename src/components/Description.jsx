@@ -21,7 +21,7 @@ function Description(props) {
           </div>
           </div>
           <Products/>
-          <Footer/>
+  
     </div>
   )
 }

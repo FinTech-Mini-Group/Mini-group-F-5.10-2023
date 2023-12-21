@@ -3,6 +3,7 @@ import global from '../../assets/icons/global.svg'
 
 function HeaderTop() {
   return (
+    
     <div className='h-[50px] w-full flex items-center justify-between font-rl'>
         <div className='flex px-20 py-2 gap-7 items-center '>
             <label htmlFor="">

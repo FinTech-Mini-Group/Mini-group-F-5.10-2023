@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
-    <div className=' container m-auto bg-Cwhite lg:pt-[50px] lg:flex justify-between'>
+    <div className=' m-auto bg-Cwhite lg:pt-[50px] lg:flex justify-around'>
         <div>
             <h1 className='text-subtitle text-subtitles mb-[30px]'>Покупателям</h1>
            {

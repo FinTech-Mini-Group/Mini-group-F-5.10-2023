@@ -4,7 +4,7 @@ import { icons } from '../utilits/icons'
 
 export const buyers = [
  {
-   linkName:<Link to={'/zakaz'}>Как сделать заказ</Link>,
+   linkName:<Link to={'/'}>Как сделать заказ</Link>,
     slug: "/zakaz",
  },   
  {
@@ -47,7 +47,7 @@ export const Partnyor = [
 
 export const company = [
 {
-   linkName: "О нас",
+   linkName: <Link to={'/AboutUs'}>О нас</Link>,
    slug: "/О нас",
 },
 {
