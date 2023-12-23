@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import HeaderTop from "./HeaderTop";
 import logo from "../../assets/logo/LOGO.svg";
 import menu from "../../assets/icons/menu.svg";
@@ -8,18 +8,18 @@ import heart from "../../assets/icons/heart.svg";
 import cart from "../../assets/icons/shopping-cart.svg";
 import profile from "../../assets/icons/profile-circle.svg";
 import { useNavigate } from "react-router-dom";
+import Catalog from "../catalog/Catalog";
 
 function Header() {
   const navigate=useNavigate();
+  const [isOpen, setIsOpen] = useState(false)
   console.log("salom")
   return (
     <div>
       <HeaderTop />
       <div className="border-t-2 font-rl border-[#999999] flex items-center justify-between px-10 py-1 ">
         <img onClick={()=>navigate("/")} src={logo} alt="" />
-        <button onClick={()=>navigate("/Catalog")} className="bg-[#00B709] flex text-white gap-2 py-2 px-4 rounded-md items-center">
-          <img src={menu} alt="" /> Каталог
-        </button>
+        <Catalog/>
         <form>
           <label
             for="default-search"
