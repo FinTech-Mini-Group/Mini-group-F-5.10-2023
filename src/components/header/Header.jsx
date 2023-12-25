@@ -12,13 +12,12 @@ import Catalog from "../catalog/Catalog";
 
 function Header() {
   const navigate=useNavigate();
-  const [isOpen, setIsOpen] = useState(false)
-  console.log("salom")
+
   return (
     <div>
       <HeaderTop />
-      <div className="border-t-2 font-rl border-[#999999] flex items-center justify-between px-10 py-1 ">
-        <img onClick={()=>navigate("/")} src={logo} alt="" />
+      <div className="border-t-2  border-[#999999] lg:flex items-center justify-between lg:px-10 py-1 ">
+        <img className="mb-[50px] sm:mt-[60px]" onClick={()=>navigate("/")} src={logo} alt="" />
         <Catalog/>
         <form>
           <label
@@ -31,16 +30,16 @@ function Header() {
             <input
               type="search"
               id="default-search"
-              class="block w-[574px] p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 dark:placeholder-gray-400 dark:text-white outline-none"
+              class="block lg:w-[574px] p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 dark:placeholder-gray-400 dark:text-white outline-none"
               placeholder="Поиск товаров"
               required
             />
-            <div class="absolute inset-y-0 right-0  flex items-center pr-3 pointer-events-none">
+            <div class="absolute inset-y-0 lg:right-0  flex items-center pr-3 pointer-events-none">
               <img src={search} alt="" />
             </div>
           </div>
         </form>
-        <div className="flex gap-5">
+        <div className="lg:flex gap-5">
           <div className="flex gap-2 px-2 py-4 list-none">
             <img src={percent} />
             <li>Акции</li>
@@ -50,7 +49,7 @@ function Header() {
             <li>Избранные</li>
           </div>
           <div className="flex gap-2 px-2 py-4 list-none">
-            <img src={cart} />
+            {/* <img src={cart} /> */}
             <li className="" onClick={()=>navigate('/Basket')}>Корзинка</li>
           </div>
           <button onClick={()=>navigate("/Signin")} className="border-2 border-[#00B709] py-2 px-4 rounded-md text-[#00B709] flex gap-2  items-center">

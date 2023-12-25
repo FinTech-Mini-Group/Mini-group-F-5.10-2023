@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import axios from "axios"
 import { category } from './data'
 import { useNavigate } from 'react-router-dom'
-
 import Img1 from "../assets/Rectangle 657.png"
 import { BASE_URL } from '../utilits/constant'
 

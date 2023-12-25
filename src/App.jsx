@@ -34,10 +34,10 @@ function App() {
     window.addEventListener('scroll', function() {
 
       if (this.scrollY > 100) {
-        setBackTop('fixed bottom-[50px] delay-1000 duration-1000 right-[100px] w-[45px] h-[45px] sm:w-[60px] sm:h-[60px] rounded-full ')
+        setBackTop('fixed bottom-[50px] z-30 delay-1000 duration-1000 right-[100px] w-[45px] h-[45px] sm:w-[60px] sm:h-[60px] rounded-full ')
       }
       else {  
-        setBackTop('fixed bottom-[-100px] right-[100px] bottom-[-100px] delay-1000 duration-1000 w-[45px] h-[45px] sm:w-[60px] sm:h-[60px] rounded-full ')
+        setBackTop('fixed bottom-[-100px] z-30 right-[100px] bottom-[-100px] delay-1000 duration-1000 w-[45px] h-[45px] sm:w-[60px] sm:h-[60px] rounded-full ')
       }
 
     })

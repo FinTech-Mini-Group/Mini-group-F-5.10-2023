@@ -33,14 +33,8 @@ function Catalog() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <div className="">
-        <button
-          onClick={() => setIsOpen((p) => !p)}
-          className="bg-[#00B709] flex text-white gap-2 py-2 px-4 rounded-md items-center "
-        >
-          {" "}
-          {isOpen ? icons.close : icons.menu}Каталог
-        </button>
+      <div className=""> 
+        <button onClick={() => setIsOpen((p) => !p)} className="bg-[#00B709] flex text-white gap-2 py-2 px-4 rounded-md items-center ">{isOpen ? icons.close : icons.menu}Каталог</button>
         {isOpen && (
           <div className="w-full m-auto bg-white absolute z-50 rounded-[10px] p-0 left-0">
             <div className="flex mb-[100px] container">
@@ -54,8 +48,7 @@ function Catalog() {
                             "w-full flex items-center justify-between list-none py-5 px-4 mr-5 hover:bg-Cmain hover:text-Cwhites "
                           }
                         >
-                          {element}{" "}
-                          <img className="inline" src={rightArrow} alt="" />
+                          {element} <span className="fill-inherit ">{icons.righ}</span>
                         </button>
                       </li>
                     );
