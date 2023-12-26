@@ -11,30 +11,37 @@ import { useNavigate } from "react-router-dom";
 import Catalog from "../catalog/Catalog";
 
 function Header() {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
+  const token = localStorage.getItem("token");
+  console.log(token);
 
   return (
     <div>
       <HeaderTop />
       <div className="border-t-2  border-[#999999] lg:flex items-center justify-between lg:px-10 py-1 ">
-        <img className="mb-[50px] sm:mt-[60px]" onClick={()=>navigate("/")} src={logo} alt="" />
-        <Catalog/>
+        <img
+          className="mb-[50px] sm:mt-[60px]"
+          onClick={() => navigate("/")}
+          src={logo}
+          alt=""
+        />
+        <Catalog />
         <form>
           <label
-            for="default-search"
-            class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+            htmlFor="default-search"
+            className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
           >
             Search
           </label>
-          <div class="relative">
+          <div className="relative">
             <input
               type="search"
               id="default-search"
-              class="block lg:w-[574px] p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 dark:placeholder-gray-400 dark:text-white outline-none"
+              className="block lg:w-[574px] p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 dark:placeholder-gray-400 dark:text-white outline-none"
               placeholder="Поиск товаров"
               required
             />
-            <div class="absolute inset-y-0 lg:right-0  flex items-center pr-3 pointer-events-none">
+            <div className="absolute inset-y-0 lg:right-0  flex items-center pr-3 pointer-events-none">
               <img src={search} alt="" />
             </div>
           </div>
@@ -50,11 +57,18 @@ function Header() {
           </div>
           <div className="flex gap-2 px-2 py-4 list-none">
             {/* <img src={cart} /> */}
-            <li className="" onClick={()=>navigate('/Basket')}>Корзинка</li>
+            <li className="" onClick={() => navigate("/Basket")}>
+              Корзинка
+            </li>
           </div>
-          <button onClick={()=>navigate("/Signin")} className="border-2 border-[#00B709] py-2 px-4 rounded-md text-[#00B709] flex gap-2  items-center">
+          <button
+            onClick={() => {
+              navigate(token ? "/profil" : "/signin");
+            }}
+            className="border-2 border-[#00B709] py-2 px-4 rounded-md text-[#00B709] flex gap-2  items-center"
+          >
             <img src={profile} alt="" />
-            Профиль
+            {token ? "Профиль" : "Войти"}
           </button>
         </div>
       </div>

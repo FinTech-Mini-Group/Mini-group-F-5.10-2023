@@ -7,8 +7,9 @@ function HeaderTop() {
     <div className='h-[50px] w-full lg:flex items-center justify-between font-rl'>
         <div className='flex lg:px-20 lg:py-2 gap-7 items-center '>
             <label htmlFor="">
+            {/* <img src={global}/> */}
                 <select name="" id="" className='bg-transparent border-none outline-none' >
-                    <option value=""><img src={global}/> Русский </option>
+                    <option value=""> Русский </option>
                 </select>
             </label>
             <h2 className='text-[#999999]'>Магазины</h2>
