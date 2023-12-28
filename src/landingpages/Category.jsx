@@ -25,11 +25,11 @@ function Category() {
         <h2 className='text-Body text-Cmain '>Все категории</h2>
       </div>
       <div className='lg:flex justify-between mb-[35px]'>
-        <div className='lg:grid lg:grid-cols-6 gap-2'>
+        <div className='lg:grid lg:grid-cols-6 gap-6'>
           {
             categories && categories.map((element, value) =>
               <div className='' key={value}>
-                <img src={element.images || Img1} alt="img" />
+                <img className='w-[262px] h-[262px] rounded-[10px]' src={element.images || Img1} alt="img" />
                 <p className=' mb-[50px] lg:text-center mt-[10px] text-subtitle text-[#000000]'>{element.name}</p>
               </div>
             )}

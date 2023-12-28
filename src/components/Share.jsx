@@ -7,7 +7,7 @@ function Share() {
  
   return (
     <div className='relative'>
-      <button onClick={() => setIsOpen(true)} className='p-[10px] border-[1px] border-solid rounded-[4px] mr-5'>{icons.share}</button>
+      <button onClick={() => setIsOpen((p)=>!p)} className='p-[10px] border-[1px] border-solid rounded-[4px] mr-5'>{icons.share}</button>
       {isOpen && (
         <div className="absolute left-[-223px] shadow-2xl">
           <div className='bg-white p-5 rounded-[10px]'>
@@ -25,9 +25,7 @@ function Share() {
                 <p className='text-Body mb-[10px]'>Facebook</p>
                 <p className='text-Body'>Instagram</p>
               </div>
-             
             </div>
-          <button className='mt-8 bg-bgmain py-2 px-4 rounded-[4px] text-Body text-Cwhite hover:text-black ' onClick={()=>setIsOpen(false)} >CLOSE</button>
           </div>
         </div>
       )}

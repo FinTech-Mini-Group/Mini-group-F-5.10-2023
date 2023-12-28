@@ -35,7 +35,7 @@ function Products() {
                 >
                   <img
                     onClick={() => navigate(`/electronic/${element.id}`)}
-                    className="w-full"
+                    className="w-[280px] h-[280px] rounded-[5px]"
                     src={`${BASE_URL}${element?.image_urls[0]}`}
                     alt=""
                   />
