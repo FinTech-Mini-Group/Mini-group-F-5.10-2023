@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import product1 from "../assets/Product images.png";
 import product2 from "../assets/Rectangle 623.png";
 import product3 from "../assets/Rectangle 624.png";
@@ -11,6 +11,9 @@ import Reviews from "./Reviews";
 import Share from "./Share";
 import Character from "./Сharacter";
 import { useParams } from "react-router-dom";
+import { BASE_URL } from "../utilits/constant";
+import axios from "axios";
+import { useProductInfoQuery } from "../services/productApi";
 
 export default function Electronic() {
   const tabsMenu = [
@@ -20,45 +23,69 @@ export default function Electronic() {
     "Вопросы (2)",
   ];
   const [activeTabs, setActiveTabs] = useState("Все характеристики товара");
-
+  const [count, setCount] = useState(1);
   const { id } = useParams();
   console.log(id);
+  const [productInfo1, setProductInfo1] = useState();
+ 
 
-  console.log(activeTabs);
+  const {data:productInfo2}=useProductInfoQuery(id)
+
+  useEffect(() => {
+    axios
+      .get(`${BASE_URL}/app/prod_info/${id}/`)
+      .then((res) => setProductInfo1(res?.data?.Success))
+      .catch((err) => console.log(err));
+  }, []);
+
+  const allPrice = Number(productInfo2?.Success?.disc_price) * Number(count);
+  console.log(allPrice);
+  console.log(productInfo1);
+  console.log(productInfo2?.Success);
+
   return (
     <div className="container m-auto">
-      <h1 className="text-subtitle">
-        Ноутбук Apple Macbook Air 13 2020 / M1 / 8GB / 256GB / Apple graphics
-        7-core, серебристый
-      </h1>
+      <h1 className="text-subtitle">{productInfo2?.Success?.title}</h1>
+
       <h2 className="text-Bodybold my-5">
-        Магазин: <span className="text-Bodybold text-Cmain">BSB STORE</span>
+        Магазин:{" "}
+        <span className="text-Bodybold text-Cmain">
+          {productInfo2?.Success?.shop_name}
+        </span>
       </h2>
       <div className="flex gap-2">
-        <div className="">
-          <img className="mb-5" src={product1} alt="" />
-          <img src={product2} alt="" />
-          <img className="my-5" src={product3} alt="" />
-          <img className="mb-5" src={product4} alt="" />
-          <img src={product4} alt="" />
+        <div className="flex flex-col gap-2">
+          {productInfo2?.Success?.image_urls?.map((element, index) => (
+            <>
+              <img
+                className="w-[100px] h-[100px] rounded-[10px]"
+                src={`${BASE_URL}${element}`}
+                alt=""
+              />
+            </>
+          ))}
         </div>
         <div>
-          <img src={product5} alt="" />
+          <img
+            className="w-[580px] h-[580px] rounded-[10px]"
+            src={`${BASE_URL}${productInfo2?.Success?.image_urls[0]}`}
+            alt=""
+          />
         </div>
         <div className="py-5 px-8 bg-Crect rounded-[10px] w-[554px]">
           <h1 className="text-Bodybold mb-5">Коротко о продукте</h1>
           <h2 className="text-subtitle mb-[10px]">О продукте</h2>
           <div className="flex justify-between mb-[10px]">
             <p className="text-Body text-brand ">Бренд</p>
-            <p className="text-Body text-subtitles">Apple</p>
+            <p className="text-Body text-subtitles">{productInfo1?.brend}</p>
           </div>
           <div className="flex justify-between mb-[10px]">
             <p className="text-Body text-brand ">Модель</p>
-            <p className="text-Body text-subtitles">Macbook Air 13 2020</p>
+            <p className="text-Body text-subtitles">{productInfo1?.model}</p>
           </div>
           <div className="flex justify-between mb-[10px]">
             <p className="text-Body text-brand ">Сертификат</p>
-            <p className="text-Body text-subtitles">Не подлежит сертификации</p>
+            <p className="text-Body text-subtitles">{productInfo1?.sert}</p>
           </div>
           <div className="flex justify-between mb-[10px]">
             <p className="text-Body text-brand ">Операционной системы</p>
@@ -66,15 +93,17 @@ export default function Electronic() {
           </div>
           <div className="flex justify-between mb-[10px]">
             <p className="text-Body text-brand">Диагональ</p>
-            <p className="text-Body text-subtitles">13.3”</p>
+            <p className="text-Body text-subtitles">{productInfo1?.dioganal}</p>
           </div>
           <div className="flex justify-between mb-[10px]">
             <p className="text-Body text-brand">Процессор</p>
-            <p className="text-Body text-subtitles">M1</p>
+            <p className="text-Body text-subtitles">{productInfo1?.protsesr}</p>
           </div>
           <div className="flex justify-between mb-[10px]">
             <p className="text-Body text-brand">Цвет:</p>
-            <p className="text-Bodybold text-subtitles">Синий</p>
+            <p className="text-Bodybold text-subtitles">
+              {productInfo2?.Success?.color}
+            </p>
           </div>
           <p className="border-[1px] border-solid border-[#00B709] w-[70px] h-[90px] rounded-[5px] mb-[10px] "></p>
           <p className="text-Body text-brand mb-[10px]">Память</p>
@@ -91,13 +120,23 @@ export default function Electronic() {
           </div>
           <p className="text-Body text-brand my-[10px]">Количество:</p>
           <div className="flex items-center">
-            <button className="py-2 px-4 bg-bgmain rounded-[4px] text-white mr-[10px]">
+            <button
+              onClick={() => {
+                if (count < 2) {
+                  setCount(1);
+                } else setCount((p) => p - 1);
+              }}
+              className="py-2 px-4 bg-bgmain rounded-[4px] text-white mr-[10px]"
+            >
               -
             </button>
             <button className="py-2 px-4 bg-white rounded-[4px] text-black border-[1px] border-solid text-Bodybold mr-[10px]">
-              1
+              {count}
             </button>
-            <button className="py-2 px-4 bg-bgmain rounded-[4px] text-white">
+            <button
+              onClick={() => setCount((p) => p + 1)}
+              className="py-2 px-4 bg-bgmain rounded-[4px] text-white"
+            >
               +
             </button>
             <p className="ml-[30px] text-Body text-Cmain">В наличии 10 шт.</p>
@@ -109,14 +148,14 @@ export default function Electronic() {
         <div>
           <div className="p-[20px] border-[1px] border-solid rounded-[4px] w-[407px]">
             <div className="flex items-center">
-              <p className="text-subtitle mr-[73px]">25 000 000 сум</p>
+              <p className="text-subtitle mr-[73px]">{allPrice}сум</p>
               <Share />
               <button className="p-[10px] border-[1px] border-solid rounded-[4px]">
                 {icons.heart}
               </button>
             </div>
             <p className="text-Bodystrik line-through">
-              30 000 000 <span className="text-Body">сум</span>
+              {productInfo2?.Success?.price} <span className="text-Body">сум</span>
             </p>
             <div className="my-5">
               <button className="py-[5px] px-2 border-solid rounded-[4px] bg-Cbadge text-Cwhite mr-[10px]">
@@ -140,7 +179,7 @@ export default function Electronic() {
             <p className="flex items-center text-Body">
               <span className="mr-[10px]">{icons.bag}</span>Магазин
             </p>
-            <p className="text-Bodybold">BSB STORE</p>
+            <p className="text-Bodybold">{productInfo2?.Success?.shop_name}</p>
           </div>
           <div className="w-[407px] flex justify-between mb-[13px]">
             <p className="flex items-center text-Body">

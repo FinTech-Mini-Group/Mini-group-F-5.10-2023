@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BeautyHealth from "./BeautyHealth";
 import ChildrenProducts from "./ChildrenProducts";
 import ComputerTechnology from "./ComputerTechnology";
@@ -13,8 +13,15 @@ import TVs from "./TVs";
 import { useState } from "react";
 import rightArrow from "../../assets/icons/arrow-right.svg";
 import { icons } from "../../utilits/icons";
+import axios from "axios";
+import { BASE_URL } from "../../utilits/constant";
+import { useCategorysQuery } from "../../services/categoryApi";
+
 
 function Catalog() {
+
+  const {data:categories}=useCategorysQuery()
+  console.log(categories)
   const catalogMenu = [
     "Телефоны и гаджеты",
     "Техника для дома",
@@ -44,7 +51,7 @@ function Catalog() {
             <div className="flex mb-[100px] container">
               <div className="">
                 <ul className="min-w-[18rem] bg-Crect text-Body font-semibold py-6">
-                  {catalogMenu.map((element, value) => {
+                  {categories?.Success?.map((element, value) => {
                     return (
                       <li key={value} onClick={() => setCatalogMenu(element)}>
                         <button
@@ -52,7 +59,7 @@ function Catalog() {
                             "w-full flex items-center justify-between list-none py-5 px-4 mr-5 hover:bg-Cmain hover:text-Cwhites "
                           }
                         >
-                          {element}{" "}
+                          {element.name}{" "}
                           <span className="fill-inherit ">{icons.righ}</span>
                         </button>
                       </li>

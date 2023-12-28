@@ -8,25 +8,18 @@ import { Pagination } from "swiper/modules";
 import "./Products.css";
 import axios from "axios";
 import { BASE_URL } from "../utilits/constant";
+import { useProductsQuery } from "../services/productApi";
 
 function Products() {
   const navigate = useNavigate();
-  const [productes, setProduct] = useState();
 
-  useEffect(() => {
-    axios
-      .get(`${BASE_URL}/app/prod/`)
-      .then((res) => setProduct(res?.data?.Success))
-      .catch((err) => console.log(err));
-  }, []);
-
-  console.log(productes);
-
+  const { data: productes } = useProductsQuery();
+  
   return (
     <div className="Products">
       <Swiper spaceBetween={30} slidesPerView={4} className="mySwiper">
         {productes &&
-          productes.map((element, value) => (
+          productes?.Success.map((element, value) => (
             <>
               <SwiperSlide>
                 <div

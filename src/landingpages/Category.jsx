@@ -4,17 +4,11 @@ import { category } from './data'
 import { useNavigate } from 'react-router-dom'
 import Img1 from "../assets/Rectangle 657.png"
 import { BASE_URL } from '../utilits/constant'
+import { useCategorysQuery } from '../services/categoryApi'
 
 function Category() {
   const navigate = useNavigate()
-  const [categories, setCategories] = useState()
-
-  useEffect(() => {
-    axios.get(`${BASE_URL}/app/ctg/`)
-      .then(res => setCategories(res?.data?.Success))
-      .catch(err => console.log(err))
-  }, [])
-
+  const {data:categories}=useCategorysQuery()
   console.log(categories)
 
   return (
@@ -27,7 +21,7 @@ function Category() {
       <div className='lg:flex justify-between mb-[35px]'>
         <div className='lg:grid lg:grid-cols-6 gap-6'>
           {
-            categories && categories.map((element, value) =>
+            categories && categories.Success.map((element, value) =>
               <div className='' key={value}>
                 <img className='w-[262px] h-[262px] rounded-[10px]' src={element.images || Img1} alt="img" />
                 <p className=' mb-[50px] lg:text-center mt-[10px] text-subtitle text-[#000000]'>{element.name}</p>
