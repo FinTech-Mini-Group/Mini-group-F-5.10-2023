@@ -19,6 +19,8 @@ import Signin from "./components/Signin";
 import Footer from "./landingpages/Footer";
 import Basket from "./components/Basket";
 import { icons } from "./utilits/icons";
+import Profil from "./components/profil/Profil";
+import PersonalInfo from "./components/profil/PersonalInfo"
 
 
 function App() {
@@ -57,6 +59,8 @@ function App() {
             <Route path='/signup' element={<Signup/>} />
             <Route path='/signin' element={<Signin/>} />
             <Route path='/basket' element={<Basket/>} />
+            <Route path="/profil" element={<Profil/>}/>
+            <Route path="/personalinfo:id" element={<PersonalInfo/>}/>
           </Routes>
           <Footer/>
           <button onClick={scrollTop} className={backTop}>

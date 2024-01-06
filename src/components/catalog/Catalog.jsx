@@ -33,8 +33,8 @@ function Catalog() {
 
   return <div className="container m-auto">
   <div className="flex items-start">
-  <div className="mr-[100px]">
-    <aside>
+  <div className="mr-[100px] min-w-[18rem]">
+    
 
     <ul className=" bg-Crect text-Body font-semibold py-6">
     {
@@ -46,7 +46,7 @@ function Catalog() {
         })
       }
         </ul>
-    </aside>
+    
       
   </div>
   <div>
