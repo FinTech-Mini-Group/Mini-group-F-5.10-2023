@@ -9,12 +9,16 @@ import "./Products.css";
 import axios from "axios";
 import { BASE_URL } from "../utilits/constant";
 import { useProductsQuery } from "../services/productApi";
+import { Contexts } from "../context/Contexts";
 
 function Products() {
   const navigate = useNavigate();
-
+  const { basket, setBasket } = useContext(Contexts);
   const { data: productes } = useProductsQuery();
-  
+console.log(products);
+  const handleAddBasket = (item) => {
+    setBasket([...basket, item]);
+  };
   return (
     <div className="Products">
       <Swiper spaceBetween={30} slidesPerView={4} className="mySwiper">
@@ -51,7 +55,10 @@ function Products() {
                   </p>
                   <p className=" mx-[10px] my-[10px] border-b-[1px]  w-[248px] bg-change"></p>
                   <div className="flex">
-                    <button className=" flex p-[8px] rounded-[4px] bg-bgmain">
+                    <button
+                      onClick={() => handleAddBasket(element)}
+                      className=" flex p-[8px] rounded-[4px] bg-bgmain"
+                    >
                       {icons.shoppingcart}
                       <span className="ml-[10px] text-Bold text-white ">
                         В корзину

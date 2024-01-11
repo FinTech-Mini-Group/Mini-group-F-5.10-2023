@@ -10,7 +10,7 @@ function Total() {
              </div>
              <div className=''>
                 <p className=' my-8 text-Bodybold text-[#999999] '>Товары 4 шт.</p>
-                 <button className='py-2 px-[150px] text-Body text-Cwhite text-center bg-Cmain rounded-[4px]'>Оформить заказ</button>
+                 <button className='py-2 w-full text-Body text-Cwhite text-center bg-Cmain rounded-[4px]'>Оформить заказ</button>
              </div>
              <div className='flex items-center mt-8'>
                 <input className='  w-6 h-6 rounded-[4px] mr-3' type="checkbox" />

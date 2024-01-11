@@ -11,6 +11,8 @@ import { useNavigate } from "react-router-dom";
 import Catalog from "../catalog/Catalog";
 
 function Header() {
+  const navigate = useNavigate();
+  const token = localStorage.getItem("token");
 
   return (
     <div>
@@ -53,7 +55,10 @@ function Header() {
             <li className="cursor-pointer">Избранные</li>
           </div>
           <div className="flex gap-2 px-2 py-4 list-none">
-
+            {/* <img src={cart} /> */}
+            <li className="" onClick={() => navigate("/Basket")}>
+              Корзинка
+            </li>
           </div>
           <button
             onClick={() => {
