@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BeautyHealth from "./BeautyHealth";
 import ChildrenProducts from "./ChildrenProducts";
 import ComputerTechnology from "./ComputerTechnology";
@@ -11,11 +11,13 @@ import PhotoVideo from "./PhotoVideo";
 import Sport from "./Sport";
 import TVs from "./TVs";
 import { useState } from "react";
-import rightArrow from "../../assets/icons/arrow-right.svg"
-import { icons } from "../../utilits/icons";
+
 
 
 function Catalog() {
+
+  const {data:categories}=useCategorysQuery()
+  console.log(categories)
   const catalogMenu = [
     "Телефоны и гаджеты",
     "Техника для дома",
@@ -29,42 +31,10 @@ function Catalog() {
     "Спорт и увлечение",
     "Игровые приставки",
   ];
-  const [activeCatalogMenu,setCatalogMenu] = useState('Телефоны и гаджеты')
 
-  return <div className="container m-auto">
-  <div className="flex items-start">
-  <div className="mr-[100px] min-w-[18rem]">
-    
-
-    <ul className=" bg-Crect text-Body font-semibold py-6">
-    {
-      catalogMenu.map((element, value) => {
-        return (
-          <li  key={value} onClick={() => setCatalogMenu(element)} ><button className={activeCatalogMenu === element ? ' py-4 px-4 flex items-start    hover:bg-Cmain hover:text-Cwhites ' :
-          '  py-4 px-4  flex items-start hover:bg-Cmain hover:text-Cwhites '}>{element} <span>{icons.RightArrow}</span></button></li>
-          )
-        })
-      }
-        </ul>
-    
-      
-  </div>
-  <div>
-    <MobilePhones title={activeCatalogMenu}/>
-    <HomeAppliances title={activeCatalogMenu}/>
-    <TVs title={activeCatalogMenu}/>
-    <ComputerTechnology title={activeCatalogMenu}/>
-    <ChildrenProducts title={activeCatalogMenu}/>
-    <PhotoVideo title={activeCatalogMenu}/>
-    <Electrics title={activeCatalogMenu}/>
-    <BeautyHealth title={activeCatalogMenu}/>
-    <Sport title={activeCatalogMenu}/>
-    <Gaming title={activeCatalogMenu}/>
-    <OfficeEquipment title={activeCatalogMenu}/>  
-    </div>
       </div>
-
-      </div>;
+    </>
+  );
 }
 
 export default Catalog;
