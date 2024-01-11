@@ -52,7 +52,7 @@ function Footer() {
             {
              networks.map((element, value) => {
                 return <li className='list-none  mr-[30px] p-[10px] border-2 border-solid rounded-[20px]' key={value}>
-                    <Link to={element.href} target="_blank" className=' '>{element.icons}</Link>
+                    <Link className=' '>{element.icons}</Link>
                 </li>
             })
            }

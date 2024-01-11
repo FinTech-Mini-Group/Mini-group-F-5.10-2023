@@ -62,9 +62,8 @@ export const company = [
 
 export const networks = [
    {
-      linkName: 'https://t.me/zulfiqor1988',
-      slug: "https://t.me/zulfiqor1988",
-      href: "https://t.me/zulfiqor1988",
+      linkName: '',
+      slug: "/telegram",
       icons : icons.telegram
    },
    {
