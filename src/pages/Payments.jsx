@@ -6,23 +6,23 @@ function Oplaty() {
         <h1 className='text-subtitle mb-5'>Способы оплаты</h1>
         <div className='grid grid-cols-2 gap-7 mb-10'>
         <div className='py-4 pl-8 pr-8 flex items-center border-2 border-solid rounded-[5px] w-[360px]'>
-        <span class="cursor-pointer flex items-center justify-center w-6 h-6 rounded-full transition-all duration-300 border border-gray-400"></span>
+        <input className='w-6 h-6' type="radio"  />
         <h1 className='text-Bodybold ml-[10px]'>Оплата через Payme</h1>
         </div>
         <div className='py-4 pl-8 flex items-center border-2 border-solid rounded-[5px] w-[360px]'>
-        <span class="cursor-pointer flex items-center justify-center w-6 h-6 rounded-full transition-all duration-300 border border-gray-400"></span>
+        <input className='w-6 h-6' type="radio"   />
         <h1 className='text-Bodybold ml-[10px]'>Оплата по карте HUMO и UZCARD</h1>
         </div>
         <div className='py-4 pl-8 flex items-center border-2 border-solid rounded-[5px] w-[360px]'>
-        <span class="cursor-pointer flex items-center justify-center w-6 h-6 rounded-full transition-all duration-300 border border-gray-400"></span>
+        <input className='w-6 h-6' type="radio"  />
         <h1 className='text-Bodybold ml-[10px]'>Оплата наличными при получении</h1>
         </div>
         <div className='py-4 pl-8 flex items-center border-2 border-solid rounded-[5px] w-[360px]'>
-        <span class="cursor-pointer flex items-center justify-center w-6 h-6 rounded-full transition-all duration-300 border border-gray-400"></span>
+        <input className='w-6 h-6' type="radio"  />
         <h1 className='text-Bodybold ml-[10px]'>Оплатить картой при получении</h1>
         </div>
         <div className='py-4 pl-8 flex items-center border-2 border-solid rounded-[5px] w-[360px]'>
-        <span class="cursor-pointer flex items-center justify-center w-6 h-6 rounded-full transition-all duration-300 border border-gray-400"></span>
+        <input className='w-6 h-6' type="radio"  />
         <h1 className='text-Bodybold ml-[10px]'>Оплата картой</h1>
         </div>
         </div>
