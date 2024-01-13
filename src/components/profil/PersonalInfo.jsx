@@ -10,10 +10,9 @@ function PersonalInfo() {
     <div className='m-[100px]'>
       <div>
       <div className='p-6 border border-change rounded-md   '>
-              <div className='flex gap-5'>
-              <button>{icons.person}</button> 
+              <div className='flex gap-5 '>
+              <button>{icons.profil}</button>
               <p className='pt-10 text-subtitle' >Имя не указано</p>
-              <button >{icons.pen}</button> 
               </div>
           <div className='flex gap-[200px] m-8'>
               <div className=' flex flex-col gap-3'>
@@ -24,9 +23,10 @@ function PersonalInfo() {
               <p className='text-Bodybold'>Не указано</p>
               </div>
               <div className='flex flex-col gap-3'>
-                <div className='flex gap-1'>
-               <p className='text-brand text-Body'>Номер телефона</p>
-               <button> {icons.pen}</button>
+                <div className='flex gap-1 '>
+               
+               <p className='text-brand text-Body '>Номер телефона</p>
+                <button>{icons.pen}</button>  
                </div>
                <p className='text-Bodybold'>+998 99 123 45 67</p>
               </div>

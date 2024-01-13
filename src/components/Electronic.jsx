@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import product1 from "../assets/Product images.png";
 import product2 from "../assets/Rectangle 623.png";
 import product3 from "../assets/Rectangle 624.png";
@@ -13,7 +13,8 @@ import Character from "./Сharacter";
 import { useParams } from "react-router-dom";
 import { BASE_URL } from "../utilits/constant";
 import axios from "axios";
-import { useProductInfoQuery } from "../services/productApi";
+import { useProductInfoQuery, useProductsQuery } from "../services/productApi";
+import { Contexts } from "../context/Contexts";
 
 export default function Electronic() {
   const tabsMenu = [
@@ -27,7 +28,12 @@ export default function Electronic() {
   const { id } = useParams();
   console.log(id);
   const [productInfo1, setProductInfo1] = useState();
+  const { basket, setBasket } = useContext(Contexts);
+  const { data: productes } = useProductsQuery();
  
+  const handleAddBasket = (item) => {
+    setBasket([...basket, item]);
+  };
 
   const {data:productInfo2}=useProductInfoQuery(id)
 
@@ -166,7 +172,7 @@ export default function Electronic() {
               </button>
             </div>
             <div className="">
-              <button className="flex bg-bgmain rounded-[4px] text-center py-2 px-[90px] text-Body text-Cwhite">
+              <button onClick={()=>handleAddBasket(element)} className="flex bg-bgmain rounded-[4px] text-center py-2 px-[90px] text-Body text-Cwhite">
                 <span className="mr-[12px]">{icons.shoppingcart}</span>Добавить
                 в корзину
               </button>

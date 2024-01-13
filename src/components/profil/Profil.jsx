@@ -26,7 +26,7 @@ function Profil() {
               </div>
                <p className='text-brand text-Body pt-5'>Посмотреть</p>
             </div>
-            <div className='bg-#DAE5FC #F8F3F5 #F8BEBE rounded-md w-[600px]'>
+            <div className='bg-gradient-to-r from-blue-100 via-pink-300 to-red-500 p-10 rounded-md w-[600px]'>
             <div className='flex  gap-3'>
                 <button>{icons.star}</button>
                 <p className='pt-10 text-subtitle'>Чеки</p>
@@ -59,7 +59,7 @@ function Profil() {
         </div>
         <div className='flex justify-between mt-9'>
           <button className='text-subtitle bg-Crect border border-[#CCC] rounded-lg px-8 py-4'>Выйти из системы</button>
-          <button className=' text-Cwhite text-subtitle bg-bgmain border border-[#CCC] rounded-lg px-8 py-4'>Сохранить изменение</button>
+          <button className=' !text-Cwhite text-subtitle bg-bgmain border border-[#CCC] rounded-lg px-8 py-4'>Сохранить изменение</button>
         </div>
     </div>
   )
