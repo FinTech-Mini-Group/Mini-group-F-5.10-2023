@@ -9,6 +9,7 @@ import cart from "../../assets/icons/shopping-cart.svg";
 import profile from "../../assets/icons/profile-circle.svg";
 import { useNavigate } from "react-router-dom";
 import Catalog from "../catalog/Catalog";
+import { icons } from "../../utilits/icons";
 
 function Header() {
   const navigate = useNavigate();
@@ -36,11 +37,11 @@ function Header() {
             <input
               type="search"
               id="default-search"
-              className="block lg:w-[574px] p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 dark:placeholder-gray-400 dark:text-white outline-none"
+              className="block lg:w-[574px] p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 dark:placeholder-gray-400 dark:text-black outline-none"
               placeholder="Поиск товаров"
               required
             />
-            <div className="absolute inset-y-0 lg:right-0  flex items-center pr-3 pointer-events-none">
+            <div className="absolute inset-y-0 lg:right-0 right-[90px] flex items-center pr-3 pointer-events-none ">
               <img src={search} alt="" />
             </div>
           </div>
@@ -71,6 +72,14 @@ function Header() {
           </button>
         </div>
       </div>
+      <div class="md:hidden w-full px-6 flex justify-between items-center fixed bottom-0 bg-white shadow-md z-50 py-3">
+        <button class='flex cursor-pointer flex-col gap-y-1 items-center '>{icons.glav}<span class="text-xs">Главная</span></button>
+        <button class="flex cursor-pointer flex-col gap-y-1 items-center ">{icons.katalog}<span class="text-xs ">Каталог</span></button>
+        <button class="flex cursor-pointer flex-col gap-y-1 items-center ">{icons.korzina}<span class="text-xs ">Корзина</span></button>
+        <button class="flex cursor-pointer flex-col gap-y-1 items-center ">{icons.izbran}<span class="text-xs ">Избранные</span></button>
+        <button class="flex cursor-pointer flex-col gap-y-1 items-center ">{icons.voyte}<span class="text-xs ">Войти</span></button>
+      </div>
+
     </div>
   );
 }

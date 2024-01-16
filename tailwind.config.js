@@ -76,6 +76,10 @@ export default {
           fontWeight: 600,
           letterSpacing: 0
         }],
+        Bodysmalet : ['5', {
+          fontWeight: 50,
+          letterSpacing: 0
+        }],
       },
       backgroundImage: {
         banner : "url('src/assets/banner background.png')",

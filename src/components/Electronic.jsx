@@ -30,12 +30,12 @@ export default function Electronic() {
   const [productInfo1, setProductInfo1] = useState();
   const { basket, setBasket } = useContext(Contexts);
   const { data: productes } = useProductsQuery();
- 
+
   const handleAddBasket = (item) => {
     setBasket([...basket, item]);
   };
 
-  const {data:productInfo2}=useProductInfoQuery(id)
+  const { data: productInfo2 } = useProductInfoQuery(id);
 
   useEffect(() => {
     axios
@@ -161,7 +161,8 @@ export default function Electronic() {
               </button>
             </div>
             <p className="text-Bodystrik line-through">
-              {productInfo2?.Success?.price} <span className="text-Body">сум</span>
+              {productInfo2?.Success?.price}{" "}
+              <span className="text-Body">сум</span>
             </p>
             <div className="my-5">
               <button className="py-[5px] px-2 border-solid rounded-[4px] bg-Cbadge text-Cwhite mr-[10px]">
@@ -172,7 +173,10 @@ export default function Electronic() {
               </button>
             </div>
             <div className="">
-              <button onClick={()=>handleAddBasket(element)} className="flex bg-bgmain rounded-[4px] text-center py-2 px-[90px] text-Body text-Cwhite">
+              <button
+                onClick={() => handleAddBasket(productInfo2?.Success)}
+                className="flex bg-bgmain rounded-[4px] text-center py-2 px-[90px] text-Body text-Cwhite"
+              >
                 <span className="mr-[12px]">{icons.shoppingcart}</span>Добавить
                 в корзину
               </button>

@@ -1,14 +1,21 @@
+.swiper-slide {
+  font-size: 18px;
+  background: #fff;
 
-  
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  width: 1130px !important;
+}
+.swiper-wrapper {
+  width: 1130px !important;
+}
+
+@media screen and (max-width: 520px) {
   .swiper-slide {
-    font-size: 18px;
-    background: #fff;
-  
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    width: 1130px !important;
+    width: 312px !important;
   }
-  .swiper-wrapper{
-    width: 1130px !important;
+  .swiper-wrapper {
+    width: 312px !important;
+  }
 }

@@ -14,7 +14,7 @@ function Category() {
   return (
     <div className='lg:container m-auto my-[50px]'>
 
-      <div className='flex justify-between items-center mb-[35px]'>
+      <div className='lg:flex justify-between items-center mb-[35px]'>
         <h1 className='text-TitleBold text-Cback'>Лучшие категории</h1>
         <h2 className='text-Body text-Cmain '>Все категории</h2>
       </div>

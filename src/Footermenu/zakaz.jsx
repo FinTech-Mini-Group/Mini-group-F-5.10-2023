@@ -4,9 +4,10 @@ import Decoration from "../pages/Decoration";
 import Order from "../pages/Order";
 import Oplaty from "../pages/Payments";
 import Total from "../pages/Total";
-import Footer from "../landingpages/Footer";
 
 function Zakaz() {
+
+
   return (
     <>
       <div className="flex justify-center w-full m-auto container">
@@ -19,7 +20,6 @@ function Zakaz() {
           <Total />
         </div>
       </div>
-      \
     </>
   );
 }
