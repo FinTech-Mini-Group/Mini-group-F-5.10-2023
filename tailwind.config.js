@@ -80,7 +80,16 @@ export default {
           fontWeight: 50,
           letterSpacing: 0
         }],
+        base : ['12', {
+          fontWeight : 600,
+          letterSpacing : 0
+        }],
+        mac: ['10', {
+        fontWeight: 400,
+        letterSpacing:400
+      }]
       },
+     
       backgroundImage: {
         banner : "url('src/assets/banner background.png')",
         banner2 : "url('src/assets/banner background2.png')",

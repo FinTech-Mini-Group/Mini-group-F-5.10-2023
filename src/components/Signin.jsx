@@ -34,8 +34,8 @@ function Signin() {
     setError(null);
   }, [phone, password]);
   return (
-    <div className="container m-auto">
-      <div className="p-8 border-[2px] border-solid rounded-[10px] mt-[50px] mb-[34px] bg-Crect w-[500px] m-auto">
+    <div className=" container m-auto">
+      <div className="p-8 border-[2px] border-solid rounded-[10px] mt-[50px] mb-[34px] bg-Crect lg:w-[500px] m-auto">
         <h1 className="text-subtitle mb-[30px] text-center">
           Войдите в свою учетную запись
         </h1>

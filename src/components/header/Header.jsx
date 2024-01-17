@@ -73,11 +73,11 @@ function Header() {
         </div>
       </div>
       <div class="md:hidden w-full px-6 flex justify-between items-center fixed bottom-0 bg-white shadow-md z-50 py-3">
-        <button class='flex cursor-pointer flex-col gap-y-1 items-center '>{icons.glav}<span class="text-xs">Главная</span></button>
+        <button onClick={()=>navigate('/')} class='flex cursor-pointer flex-col gap-y-1 items-center '>{icons.glav}<span class="text-xs">Главная</span></button>
         <button class="flex cursor-pointer flex-col gap-y-1 items-center ">{icons.katalog}<span class="text-xs ">Каталог</span></button>
-        <button class="flex cursor-pointer flex-col gap-y-1 items-center ">{icons.korzina}<span class="text-xs ">Корзина</span></button>
+        <button onClick={()=>navigate('/Basket')} class="flex cursor-pointer flex-col gap-y-1 items-center ">{icons.korzina}<span class="text-xs ">Корзина</span></button>
         <button class="flex cursor-pointer flex-col gap-y-1 items-center ">{icons.izbran}<span class="text-xs ">Избранные</span></button>
-        <button class="flex cursor-pointer flex-col gap-y-1 items-center ">{icons.voyte}<span class="text-xs ">Войти</span></button>
+        <button onClick={()=>navigate('/Signin')} class="flex cursor-pointer flex-col gap-y-1 items-center ">{icons.voyte}<span class="text-xs ">Войти</span></button>
       </div>
 
     </div>
