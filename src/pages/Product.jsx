@@ -19,6 +19,7 @@ console.log(products);
   const handleAddBasket = (item) => {
     setBasket([...basket, item]);
   };
+  
   return (
     <div className="Products">
       <Swiper spaceBetween={30} slidesPerView={4} className="mySwiper">
@@ -36,6 +37,7 @@ console.log(products);
                     src={`${BASE_URL}${element?.image_urls[0]}`}
                     alt=""
                   />
+                   
                   <div className=" my-[10px]">
                     <button className="py-[5px] px-[8px] rounded-[4px] bg-Cbadge text-white mr-[10px]">
                       {element.discount} % скидка

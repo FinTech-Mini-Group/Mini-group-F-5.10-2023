@@ -1,6 +1,8 @@
-import React from 'react'
-
+import React, { useContext } from 'react'
+import { Contexts } from "../context/Contexts";
+import { BASE_URL } from "../utilits/constant";
 function Total() {
+  const {basket , count} = useContext(Contexts)
   return (
     <div className='py-5 px-[30px] border-2 border-solid rounded-[10px] h-full'>
             <div className='flex items-center'>
