@@ -11,7 +11,7 @@ function Order() {
         <h3 className="text-Body text-[#999999]">Изменить</h3>
       </div>
       {basket?.map((element, value) => (
-        <div className="grid grid-cols-9 items-center mt-5" key={value}>
+        <div className="lg:grid grid-cols-9 items-center mt-5" key={value}>
           <div className="col-span-6 flex items-center">
             <img
               className="mr-5 w-40"

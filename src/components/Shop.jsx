@@ -16,6 +16,7 @@ function Shop() {
       .then((res) => {
         setShop(res?.data?.Success || []);
         setIsLoading(false);
+        console.log(res.data)
       })
       .catch((err) => {
         console.error(err);

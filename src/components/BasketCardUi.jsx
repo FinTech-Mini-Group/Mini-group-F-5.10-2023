@@ -10,7 +10,7 @@ function BasketCardUi({ element }) {
   setId(element.id);
   return (
     <>
-      <div className="flex mb-[40px]">
+      <div className="lg:flex mb-[40px]">
         <input className="mr-[20px] w-6" type="checkbox" />
         <img
           className="mr-5 w-40"

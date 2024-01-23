@@ -18,6 +18,7 @@ import Basket from "./components/Basket";
 import { icons } from "./utilits/icons";
 import Profil from "./components/profil/Profil";
 import PersonalInfo from "./components/profil/PersonalInfo";
+import Subcategory from "../src/landingpages/Subcategory";
 
 function App() {
   const [activeTabs, setActiveTabs] = useState(false);
@@ -75,6 +76,7 @@ function App() {
             <Route path="/basket" element={<Basket />} />
             <Route path="/profil" element={<Profil />} />
             <Route path="/personalinfo:id" element={<PersonalInfo />} />
+            <Route path="Subcategory" element={<Subcategory />} />
           </Routes>
           <Footer />
           <button onClick={scrollTop} className={backTop}>

@@ -29,10 +29,10 @@ function Basket() {
   return (
     <div className="container m-auto">
       <h1 className="text-TitleBold my-8 ">Корзина</h1>
-      <div className="flex gap-8">
+      <div className="lg:flex gap-8">
         <div className="p-7 border-[2px] border-solid rounded-[10px]  ">
-          <div className="flex justify-between">
-            <div className="flex">
+          <div className="lg:flex justify-between">
+            <div className="lg:flex">
               <input className="mr-[20px] w-6" type="checkbox" />
               <p className="text-subtitle">Выбрать всё</p>
             </div>
@@ -40,7 +40,7 @@ function Basket() {
               <h2 className="Bodybold">Удалить</h2>
             </div>
           </div>
-          <div className="flex ">
+          <div className="lg:flex ">
             <div className="flex justify-arround mt-5">
               <div className="gap-30 ">
                 {basket.map((element, value) => (
@@ -51,8 +51,8 @@ function Basket() {
           </div>
         </div>
 
-        <div className="border-[2px] border-solid rounded-[10px] py-5 px-8 w-[400px] h-full">
-          <div className="flex justify-between items-center">
+        <div className="border-[2px] border-solid rounded-[10px] py-5 px-8 lg:w-[400px] h-full">
+          <div className="lg:flex justify-between items-center">
             <h2 className="text-TitleBold">Итого:</h2>
             <p className="text-subtitle !text-Cmain">
               {allPrice} <span className="!text-Bodybold text-black">сум</span>

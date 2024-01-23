@@ -10,7 +10,7 @@ function Zakaz() {
 
   return (
     <>
-      <div className="flex justify-center w-full m-auto container">
+      <div className="lg:flex justify-center w-full m-auto container">
         <div className="p-5 border-2 border-solid rounded-[10px]  mr-[30px] w-[70%]">
           <Decoration />
           <Order />

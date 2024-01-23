@@ -40,7 +40,7 @@ function Catalog() {
   useEffect(() => {
     axios
       .get(`${BASE_URL}/app/ctg/${ctgId}/`)
-      .then((res) => setSubCtg(res?.data?.Success?.subctg_set))
+      .then((res) => setSubCtg(res?.data?.Success))
       .catch((err) => console.log(err));
   }, [ctgId]);
   console.log(subCtg);
@@ -93,10 +93,11 @@ function Catalog() {
               </div>
               <div className="px-14">
                 <ul>
-                  {subCtg &&
+                  {/* {subCtg &&
                     subCtg?.map((item, index) => (
                       <li className="my-6 text-Body text-xl">{item.name}</li>
-                    ))}
+                    ))} */}
+                    <li>{subCtg?.name}</li>
                 </ul>
               </div>
             </div>

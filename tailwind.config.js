@@ -48,6 +48,10 @@ export default {
           fontWeight: 600,
           letterSpacing: 0
         }],
+        subtit:['24px', {
+          fontWeight: 400,
+          letterSpacing: 0
+        }],
         TitleBold: ['36px', {
           fontWeight: 700,
           letterSpacing: 0

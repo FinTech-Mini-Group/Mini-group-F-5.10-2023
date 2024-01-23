@@ -53,7 +53,7 @@ function Header() {
           </div>
           <div className="flex gap-2 px-2 py-4 list-none">
             <img src={heart} />
-            <li className="cursor-pointer">Избранные</li>
+            <li onClick={() => navigate("./Subcategory")} className="cursor-pointer">Избранные</li>
           </div>
           <div className="flex gap-2 px-2 py-4 list-none">
             {/* <img src={cart} /> */}
