@@ -7,7 +7,7 @@ import Products from '../pages/Product'
 function Subcategory() {
   return (
     <div className='container m-auto'>
-        <div className='flex'>
+        <div className='lg:flex'>
         <div>
             <h1 className='text-subtitle text-subtitles mb-[5px] '>Смартфоны Apple</h1>
             <p className='text-Body text-brand'>159 товаров</p>

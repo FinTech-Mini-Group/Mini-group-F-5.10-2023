@@ -1,26 +1,20 @@
-import React, { useEffect, useState } from 'react'
-import axios from "axios"
-import { category } from './data'
-import { useNavigate } from 'react-router-dom'
-import Img1 from "../assets/Rectangle 657.png"
-import { BASE_URL } from '../utilits/constant'
-import { useCategorysQuery } from '../services/categoryApi'
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Img1 from "../assets/Rectangle 657.png";
+import { useCategorysQuery } from '../services/categoryApi';
 
 function Category() {
-  const navigate = useNavigate()
-  const {data:categories}=useCategorysQuery()
-  // console.log(categories)
+  const navigate = useNavigate();
+  const { data: categories } = useCategorysQuery();
 
-  const [first, setFirst] = useState(1)
-    const cardProduct = 6
-    const lastProductKey = first * cardProduct
-    const firstProductKey = lastProductKey - cardProduct
+  const [first, setFirst] = useState(1);
+  const cardProduct = 6;
+  const lastProductKey = Math.max(first * cardProduct, 0);
+  const firstProductKey = Math.max(lastProductKey - cardProduct, 0);
 
-    const res = categories?.Success?.slice(firstProductKey, lastProductKey)
-    // console.log(res);
-    const numbers = [...Array(Math.floor(categories?.Success?.length / cardProduct) + 2).keys()].slice(1)
-    console.log(numbers)
- 
+  const res = categories?.Success?.slice(firstProductKey, lastProductKey) || [];
+  const categoryLength = categories?.Success?.length || 0;
+  const numbers = [...Array(Math.max(Math.floor(categoryLength / cardProduct) + 2, 0)).keys()].slice(1);
   return (
     <div className='lg:container m-auto my-[50px]'>
 

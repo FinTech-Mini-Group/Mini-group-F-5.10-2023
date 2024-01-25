@@ -18,18 +18,18 @@ function AboutUs() {
   return (
 
     <div className="container m-auto">
-      <div className="mx-[60px] my-[50px] ">
+      <div className="lg:mx-[60px] lg:my-[50px] ">
         <h1 className="py-2 pl-10 font-rl text-subtitle">О нас</h1>
-        <div className="px-[100px]">
-          <div className="bg-computerimage bg-cover  h-[680px] pt-25 mt-[30px]">
-            <h2 className="text-white font-rl pt-[100px] pl-[100px] text-[24px]  ">
+        <div className="lg:px-[100px]">
+          <div className=" bg-computerimage w-full h-full lg:bg-computerimage bg-cover  lg:h-[680px] pt-25 mt-[30px]">
+            <h2 className=" py-4 px-6 text-[20px] text-white font-rl lg:pt-[100px] lg:pl-[100px] lg:text-[24px]  ">
               Мы продаём товары для дома, работы и отдыха. <br />
               Наши клиенты: мелкие и крупные оптовики, <br />
               торговые сети и простые розничные покупатели.
             </h2>
           </div>
         </div>
-        <div className=" grid grid-cols-3 gap-[110px] mt-[100px]">
+        <div className=" lg:grid grid-cols-3 gap-[110px] mt-[100px]">
           <div>
             <h1 className="text-TitleBold">Выгодные цены</h1>
             <p  className="text-Body">
@@ -57,9 +57,9 @@ function AboutUs() {
         </div>
       </div>
 
-      <div className=" container m-auto mb-[100px]">
+      <div className=" container m-auto lg:mb-[100px]">
         <h1 className="text-Bold">Наши партнеры</h1>
-        <div className=" mt-[35px] grid grid-cols-6 gap-[30px] ">
+        <div className=" mt-[35px] lg:grid grid-cols-6 gap-[30px] ">
           <div className="bg-white flex items-center justify-center py-[93px] border border-bggrey rounded-[10px]">
             <img src={Google} alt="" />
           </div>
@@ -89,7 +89,7 @@ function AboutUs() {
         <h1 className="text-Bold">Новости</h1>
 
         
-        <div className=" mt-[35px] grid grid-cols-5 gap-[30px] ">
+        <div className=" mt-[35px] lg:grid grid-cols-5 gap-[30px] ">
           <div>
             <div className="bg-white flex items-center justify-center py-[41px] border border-bggrey rounded-[10px]">
                <img src={telgram} alt="" />
