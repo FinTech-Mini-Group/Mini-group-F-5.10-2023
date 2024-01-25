@@ -15,6 +15,7 @@ function Category() {
   const res = categories?.Success?.slice(firstProductKey, lastProductKey) || [];
   const categoryLength = categories?.Success?.length || 0;
   const numbers = [...Array(Math.max(Math.floor(categoryLength / cardProduct) + 2, 0)).keys()].slice(1);
+  console.log(numbers);
   return (
     <div className='lg:container m-auto my-[50px]'>
 

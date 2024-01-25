@@ -19,6 +19,8 @@ import { icons } from "./utilits/icons";
 import Profil from "./components/profil/Profil";
 import PersonalInfo from "./components/profil/PersonalInfo";
 import Subcategory from "../src/landingpages/Subcategory";
+import SearchInput from "./components/header/Searchinput";
+import Products from "./pages/Product";
 
 function App() {
   const [activeTabs, setActiveTabs] = useState(false);
@@ -27,6 +29,7 @@ function App() {
   const [basket, setBasket] = useState([])
   const [count, setCount] = useState(1);
   const [Id,setId]=useState(0)
+ 
     const [backTop, setBackTop] = useState(
     "fixed bottom-[-50px] sm:bottom-[-100px] right-[100px] w-[45px] h-[45px] sm:w-[60px] sm:h-[60px] rounded-full "
   );
@@ -51,6 +54,7 @@ function App() {
   console.log(basket);
   return (
     <>
+      
       <div className="font-rl">
         <Contexts.Provider
           value={{

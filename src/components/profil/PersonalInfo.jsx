@@ -7,7 +7,7 @@ function PersonalInfo() {
    const [showmodalka , setShowModalka] = useState(false)
    const handleClose = () => setShowModalka(false)
   return (
-    <div className='m-[100px]'>
+    <div className='lg:m-[100px]'>
       <div>
       <div className='p-6 border border-change rounded-md   '>
               <div className='flex gap-5 '>

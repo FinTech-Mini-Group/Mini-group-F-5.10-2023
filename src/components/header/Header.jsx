@@ -10,6 +10,7 @@ import profile from "../../assets/icons/profile-circle.svg";
 import { useNavigate } from "react-router-dom";
 import Catalog from "../catalog/Catalog";
 import { icons } from "../../utilits/icons";
+import SearchInput from "./Searchinput";
 
 function Header() {
   const navigate = useNavigate();
@@ -46,6 +47,7 @@ function Header() {
             </div>
           </div>
         </form>
+       
         <div className="lg:flex gap-5">
           <div className="flex gap-2 px-2 py-4 list-none">
             <img src={percent} />

@@ -40,7 +40,7 @@ function BankCard({visible , onClose}) {
     <div className='fixed  z-500 inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center '>
         <div className='bg-[#FFFFFF] p-[30px] rounded-[10px]'>
                 <h1 className='text-TitleBold mb-5 '>Привязка карты</h1>
-                <div className='w-[480px] h-[380px] px-4 flex gap-8 items-start justify-center flex-col shadow-[0px_0px_20px_1px_rgba(0,0,0,0.10)] '>
+                <div className='lg:w-[480px] lg:h-[380px] px-4 flex gap-8 items-start justify-center flex-col shadow-[0px_0px_20px_1px_rgba(0,0,0,0.10)] '>
                   <input onChange={handleChange}   maxLength={19} className='bg-[#EFEFF4] p-3 w-full flex justify-center' type="text" id="cardNumber" name="cardNumber" value={cardNumber} placeholder='XXXX XXXX XXXX XXXX' />
                   <div className='flex items-center'>
                     <form className='flex items-center' action="">
