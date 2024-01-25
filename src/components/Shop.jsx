@@ -40,16 +40,16 @@ function Shop() {
       {isLoading && <p>Loading...</p>}
       {!isLoading &&
         displayedItems.map((element, index) => (
-          <div key={index} className="flex items-start gap-6 mb-5 ">
-            <h1 className="text-Bodybold w-[500px] ">{element.title}</h1>
-            <p className="text-Bodybold mr-[50px] ">22 900 000 сум</p>
+          <div key={index} className="lg:flex items-start gap-6 mb-5 ">
+            <h1 className="text-Bodybold lg:w-[500px] ">{element.title}</h1>
+            <p className="text-Bodybold lg:mr-[50px] ">22 900 000 сум</p>
             <button className="py-2 px-4 bg-bgmain rounded-[4px] text-Body text-Cwhite ">
               Посмотреть
             </button>
             
           </div>
         ))}
-      <p className="border-[1px] border-solid border-[#ECECEC] w-[1000px] my-[18px]"></p>
+      <p className="border-[1px] border-solid border-[#ECECEC] lg:w-[1000px] my-[18px]"></p>
 
       <ul className="flex gap-6 justify-start">
         {[...Array(Math.ceil(shop.length / itemsPerPage)).keys()].map(

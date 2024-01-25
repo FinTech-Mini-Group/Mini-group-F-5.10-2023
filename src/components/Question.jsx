@@ -7,10 +7,10 @@ export default function Question(props) {
   return (
     <div className={props.title === 'Вопросы (2)' ? 'block' : 'hidden'}>
       <h1 className='text-Bodybold mb-5'>Если у вас есть какие-нибудь вопросы отправьте, мы ответим</h1>
-      <div className='my-[10px] ml-[100px] mr-[30px] '>
-        <div className='flex items-start mb-5'>
+      <div className='my-[10px] lg:ml-[100px] mr-[30px] '>
+        <div className='lg:flex items-start mb-5'>
            <div className=''>
-            <p className='text-Bodybold mb-[10px] mr-[250px]'>Gulnoza</p>
+            <p className='text-Bodybold mb-[10px] lg:mr-[250px]'>Gulnoza</p>
             <p className='text-Body text-brand mb-[10px]'>Ташкент</p>
             <p className='text-Bodysmall text-brand '>17.06.2022</p>
             <p className='text-Bodysmall text-brand '>19:30:09</p>
@@ -19,9 +19,9 @@ export default function Question(props) {
                 <p className='text-Body text- subtitles'>Здравствуйте а у вас есть доставка до дома?</p>
             </div>  
         </div>    
-        <div className='flex items-start'>
+        <div className='lg:flex items-start'>
            <div className=''>
-            <p className='text-Bodybold mb-[10px] mr-[250px]'>Ответ от Milli</p>
+            <p className='text-Bodybold mb-[10px] lg:mr-[250px]'>Ответ от Milli</p>
             <p className='text-Body text-brand mb-[10px]'>Ташкент</p>
             <p className='text-Bodysmall text-brand '>17.06.2022</p>
             <p className='text-Bodysmall text-brand '>19:30:09</p>
@@ -31,11 +31,11 @@ export default function Question(props) {
             </div>  
         </div> 
       </div>
-      <p className='border-[1px] border-solid border-[#CCCCCC] w-[1300px] my-5'></p>
-      <div className='my-[10px] ml-[100px] mr-[30px] '>
+      <p className='border-[1px] border-solid border-[#CCCCCC] lg:w-[1300px] my-5'></p>
+      <div className='my-[10px] lg:ml-[100px] mr-[30px] '>
         <div className='flex items-start mb-5'>
            <div className=''>
-            <p className='text-Bodybold mb-[10px] mr-[250px]'>Akmal</p>
+            <p className='text-Bodybold mb-[10px] llg:mr-[250px]'>Akmal</p>
             <p className='text-Body text-brand mb-[10px]'>Ташкент</p>
             <p className='text-Bodysmall text-brand '>17.06.2022</p>
             <p className='text-Bodysmall text-brand '>19:30:09</p>
@@ -46,7 +46,7 @@ export default function Question(props) {
         </div>    
         <div className='flex items-start'>
            <div className=''>
-            <p className='text-Bodybold mb-[10px] mr-[250px]'>Ответ от Milli</p>
+            <p className='text-Bodybold mb-[10px] lg:mr-[250px]'>Ответ от Milli</p>
             <p className='text-Body text-brand mb-[10px]'>Ташкент</p>
             <p className='text-Bodysmall text-brand '>17.06.2022</p>
             <p className='text-Bodysmall text-brand '>19:30:09</p>

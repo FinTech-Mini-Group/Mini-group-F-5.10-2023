@@ -59,7 +59,7 @@ export default function Electronic() {
           {productInfo2?.Success?.shop_name}
         </span>
       </h2>
-      <div className="flex gap-2">
+      <div className="lg:flex gap-2">
         <div className="flex flex-col gap-2">
           {productInfo2?.Success?.image_urls?.map((element, index) => (
             <>
@@ -73,12 +73,12 @@ export default function Electronic() {
         </div>
         <div>
           <img
-            className="w-[580px] h-[580px] rounded-[10px]"
+            className="lg:w-[580px] h-[580px] rounded-[10px]"
             src={`${BASE_URL}${productInfo2?.Success?.image_urls[0]}`}
             alt=""
           />
         </div>
-        <div className="py-5 px-8 bg-Crect rounded-[10px] w-[554px]">
+        <div className="py-5 px-8 bg-Crect rounded-[10px] lg:w-[554px]">
           <h1 className="text-Bodybold mb-5">Коротко о продукте</h1>
           <h2 className="text-subtitle mb-[10px]">О продукте</h2>
           <div className="flex justify-between mb-[10px]">
@@ -152,7 +152,7 @@ export default function Electronic() {
           </p>
         </div>
         <div>
-          <div className="p-[20px] border-[1px] border-solid rounded-[4px] w-[407px]">
+          <div className="p-[20px] border-[1px] border-solid rounded-[4px] lg:w-[407px]">
             <div className="flex items-center">
               <p className="text-subtitle mr-[73px]">{allPrice}сум</p>
               <Share />
@@ -175,36 +175,36 @@ export default function Electronic() {
             <div className="">
               <button
                 onClick={() => handleAddBasket(productInfo2?.Success)}
-                className="flex bg-bgmain rounded-[4px] text-center py-2 px-[90px] text-Body text-Cwhite"
+                className="flex bg-bgmain rounded-[4px] text-center py-2 lg:px-[90px] text-Body text-Cwhite"
               >
                 <span className="mr-[12px]">{icons.shoppingcart}</span>Добавить
                 в корзину
               </button>
-              <button className="border-[1px] border-solid border-[#00B709] rounded-[4px] py-2 px-[128px] text-Cmain mt-5">
+              <button className="border-[1px] border-solid border-[#00B709] rounded-[4px] py-2 lg:px-[128px] text-Cmain mt-5">
                 Купить сейчас
               </button>
             </div>
           </div>
-          <div className="w-[407px] flex justify-between mt-5 mb-[13px]">
+          <div className="lg:w-[407px] flex justify-between mt-5 mb-[13px]">
             <p className="flex items-center text-Body">
               <span className="mr-[10px]">{icons.bag}</span>Магазин
             </p>
             <p className="text-Bodybold">{productInfo2?.Success?.shop_name}</p>
           </div>
-          <div className="w-[407px] flex justify-between mb-[13px]">
+          <div className="lg:w-[407px] flex justify-between mb-[13px]">
             <p className="flex items-center text-Body">
               <span className="mr-[10px]">{icons.car}</span>Доставка
             </p>
             <p className="text-Bodybold">Есть</p>
           </div>
-          <div className="w-[407px] flex justify-between mb-[13px]">
+          <div className="lg:w-[407px] flex justify-between mb-[13px]">
             <p className="flex items-center text-Body">
               <span className="mr-[10px]">{icons.recovery}</span>Условия
               возврата
             </p>
             <p className="text-Bodybold">Есть, 10 дней</p>
           </div>
-          <div className="w-[407px] flex justify-between mb-[13px]">
+          <div className="lg:w-[407px] flex justify-between mb-[13px]">
             <p className="flex items-center text-Body">
               <span className="mr-[10px]">{icons.payments}</span>Способы оплаты
             </p>
@@ -215,7 +215,7 @@ export default function Electronic() {
           </div>
         </div>
       </div>
-      <ul className="flex my-5">
+      <ul className="lg:flex my-5">
         {tabsMenu.map((element, value) => {
           return (
             <li key={value} onClick={() => setActiveTabs(element)}>
