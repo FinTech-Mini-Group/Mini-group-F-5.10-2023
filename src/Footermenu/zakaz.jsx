@@ -11,12 +11,12 @@ function Zakaz() {
   return (
     <>
       <div className="lg:flex justify-center w-full m-auto container">
-        <div className="p-5 border-2 border-solid rounded-[10px]  mr-[30px] w-[70%]">
+        <div className="p-5 border-2 border-solid rounded-[10px]  lg:mr-[30px] lg:w-[70%]">
           <Decoration />
           <Order />
           <Oplaty />
         </div>
-        <div className="w-[30%] h-fit">
+        <div className="lg:w-[30%] lg:h-fit">
           <Total />
         </div>
       </div>

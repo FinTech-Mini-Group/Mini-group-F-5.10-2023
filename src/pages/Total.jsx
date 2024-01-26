@@ -4,9 +4,9 @@ import { BASE_URL } from "../utilits/constant";
 function Total() {
   const {basket , count} = useContext(Contexts)
   return (
-    <div className='py-5 px-[30px] border-2 border-solid rounded-[10px] h-full'>
-            <div className='flex items-center'>
-             <h1 className='text-TitleBold mr-8'>Итого:</h1>
+    <div className='py-5 px-[30px] border-2 border-solid rounded-[10px] w-full lg:h-full'>
+            <div className='lg:flex items-center'>
+             <h1 className='text-TitleBold lg:mr-8'>Итого:</h1>
              <p className='text-subtitle !text-Cmain mr-[5px]'>29 780 000 <span className='text-Bodybold text-black'>сум</span></p>
              
              </div>
