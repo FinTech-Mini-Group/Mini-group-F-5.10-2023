@@ -14,7 +14,7 @@ function PersonalInfo() {
               <button>{icons.profil}</button>
               <p className='pt-10 text-subtitle' >Имя не указано</p>
               </div>
-          <div className='flex gap-[200px] m-8'>
+          <div className='lg:flex gap-[200px] m-8'>
               <div className=' flex flex-col gap-3'>
                 <div className='flex gap-1 '>
               <p className='text-brand text-Body'>E-mail</p>

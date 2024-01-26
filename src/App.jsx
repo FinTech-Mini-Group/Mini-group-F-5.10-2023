@@ -19,7 +19,6 @@ import { icons } from "./utilits/icons";
 import Profil from "./components/profil/Profil";
 import PersonalInfo from "./components/profil/PersonalInfo";
 import Subcategory from "../src/landingpages/Subcategory";
-import SearchInput from "./components/header/Searchinput";
 import Products from "./pages/Product";
 
 function App() {

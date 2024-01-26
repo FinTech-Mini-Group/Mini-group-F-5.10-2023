@@ -9,7 +9,7 @@ function Reviews(props) {
   return (
 
     <div className={props.title === 'Отзывы покупателей (21)' ? 'block' : 'hidden'}>
-       <div className='flex'>
+       <div className='lg:flex'>
         <h1 className='text-Bodybold lg:mr-[700px]'>Здесь пока нет комментарий, будьте первыми!</h1>
         <button onClick={()=>setShowModal(true)} className='flex py-2 px-4 bg-bgmain rounded-[4px] text-Body text-Cwhite'><span className='mr-[10px]'>{icons.magicpen}</span>Оставить</button>
        </div>
@@ -49,13 +49,13 @@ function Reviews(props) {
             </div>
         </div>
        </div>
-       <div className=' gap-6 flex items-center mt-[38px] mb-[50px]'>
+       {/* <div className=' gap-6 flex items-center mt-[38px] mb-[50px]'>
             <button className='p-2  rounded-[4px]  bg-[#6EFF75]'>{icons.arrowl}</button>
             <button className='py-2 px-4 border-[1px] text-brand border-solid rounded-[4px] hover:bg-bgmain '>1</button>
             <button className='py-2 px-4 border-[1px] text-brand border-solid rounded-[4px] hover:bg-bgmain '>2</button>
             <button className='py-2 px-4 border-[1px] text-brand border-solid rounded-[4px] hover:bg-bgmain '>3</button>
             <button className='flex py-2 px-4 border-[1px] border-solid rounded-[4px] hover:bg-bgmain '>Следующее <span>{icons.arrowr}</span></button>
-          </div>
+          </div> */}
        <Shop/>
        <Rewiess onClose={handleOnclose} visible={showmodal}/>
     </div>

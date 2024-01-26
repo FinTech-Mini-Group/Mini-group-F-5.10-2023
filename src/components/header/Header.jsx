@@ -10,7 +10,7 @@ import profile from "../../assets/icons/profile-circle.svg";
 import { useNavigate } from "react-router-dom";
 import Catalog from "../catalog/Catalog";
 import { icons } from "../../utilits/icons";
-import SearchInput from "./Searchinput";
+
 
 function Header() {
   const navigate = useNavigate();
