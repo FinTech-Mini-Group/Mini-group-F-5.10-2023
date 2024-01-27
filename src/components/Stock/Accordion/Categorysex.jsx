@@ -15,7 +15,7 @@ export const Stock = [
     'До 15%',
     'До 18%',
 ]
-function Categoryone() {
+function Categorysex() {
     const [accordionOpen, setAccordionOpen] = useState(null);
     const toggleAccordion = (index) => {
         setAccordionOpen((prevIndex) => (prevIndex === index ? null : index));
@@ -24,7 +24,7 @@ function Categoryone() {
   return (
     <>
     <div className=''>
-        <h1 className='flex items-center text-TitleBold mb-[50px]' onClick={()=>toggleAccordion(0)}>Название категории 1 <span className='ml-[10px]'>{icons.bottom}</span></h1>
+        <h1 className='flex items-center text-TitleBold mb-[50px]' onClick={()=>toggleAccordion(0)}>Название категории 6 <span className='ml-[10px]'>{icons.bottom}</span></h1>
         <div className={`${accordionOpen === 0 ? '' : 'hidden'}`}>
         <p className='text-subtitle mb-[10px]'>Только для юридических лиц и ИП</p>
         <p className='text-Body mb-[50px]'>Оптовая цена вступает в силу, когда в «Корзине» стоимость товаров с пометкой «Опт «Название категории»» превышает ??? ??? ??? сумов, дополнительная скидка при покупке:</p>
@@ -55,4 +55,4 @@ function Categoryone() {
   )
 }
 
-export default Categoryone
+export default Categorysex

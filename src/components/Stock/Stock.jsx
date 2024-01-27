@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Bulkprices from './Bulkprices';
 import Discounts from './Discounts';
+import Gifts from './Gifts';
+import Superprices from './Superprices';
 
 
 
@@ -23,7 +25,7 @@ function Stock() {
                 {
                     Stockmenu.map((element,value)=>{
                         return (
-                            <li className='mb-5 hover:text-Cmain' key={value} onClick={()=>setActiveTabs(element)}>{element}</li>
+                            <li  className='mb-5 hover:text-Cmain' key={value} onClick={()=>setActiveTabs(element)}>{element}</li>
                         )
                     })
                 }
@@ -32,7 +34,9 @@ function Stock() {
         </div>
         <div>
            <Bulkprices title = {activeTabs} />   
-           <Discounts title = {activeTabs} />   
+           <Discounts title = {activeTabs} /> 
+           <Superprices title = {activeTabs}/> 
+           <Gifts title = {activeTabs}/>
         </div>
 
     </div>

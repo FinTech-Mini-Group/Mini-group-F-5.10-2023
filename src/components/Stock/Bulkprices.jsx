@@ -1,6 +1,13 @@
 import React from 'react'
 import Rectang from '../../assets/Rectangle 679.png'
+import Categoryfive from './Accordion/Categoryfive'
+import Categoryfour from './Accordion/Categoryfour'
+import CategoryN from './Accordion/CategoryN'
 import Categoryone from './Accordion/Categoryone'
+import Categoryseven from './Accordion/Categoryseven'
+import Categorysex from './Accordion/Categorysex'
+import Categorthree from './Accordion/Categorythree'
+import Categorytwo from './Accordion/Categorytwo'
 function Bulkprices(props) {
   return (
     <div className={props.title === 'Оптовые цены' ? 'block' : 'hidden'}>
@@ -16,6 +23,13 @@ function Bulkprices(props) {
         </div>
         <div>
             <Categoryone/>
+            <Categorytwo/>
+            <Categorthree/>
+            <Categoryfour/>
+            <Categoryfive/>
+            <Categorysex/>
+            <Categoryseven/>  
+            <CategoryN/>  
         </div>
         </div>
   )
