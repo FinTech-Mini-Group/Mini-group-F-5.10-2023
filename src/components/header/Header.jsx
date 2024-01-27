@@ -51,11 +51,11 @@ function Header() {
         <div className="lg:flex gap-5">
           <div className="flex gap-2 px-2 py-4 list-none">
             <img src={percent} />
-            <li className="cursor-pointer">Акции</li>
+            <li onClick={()=>navigate("./Stock")} className="cursor-pointer">Акции</li>
           </div>
           <div className="flex gap-2 px-2 py-4 list-none">
             <img src={heart} />
-            <li onClick={() => navigate("./Subcategory")} className="cursor-pointer">Избранные</li>
+            <li  className="cursor-pointer">Избранные</li>
           </div>
           <div className="flex gap-2 px-2 py-4 list-none">
             {/* <img src={cart} /> */}

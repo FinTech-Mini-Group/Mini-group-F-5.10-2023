@@ -13,9 +13,9 @@
 
 @media screen and (max-width: 520px) {
   .swiper-slide {
-    width: 312px !important;
+    width: 320px !important;
   }
   .swiper-wrapper {
-    width: 312px !important;
+    width: 320px !important;
   }
 }

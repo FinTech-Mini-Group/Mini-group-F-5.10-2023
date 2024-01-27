@@ -15,6 +15,7 @@ import { icons } from "../../utilits/icons";
 import { useCategorysQuery } from "../../services/categoryApi";
 import axios from "axios";
 import { BASE_URL } from "../../utilits/constant";
+import { useNavigate } from "react-router-dom";
 
 function Catalog() {
   const { data: categories } = useCategorysQuery();
@@ -33,6 +34,7 @@ function Catalog() {
     "Спорт и увлечение",
     "Игровые приставки",
   ];
+  const navigate = useNavigate();
   const [activeCatalogMenu, setCatalogMenu] = useState("Телефоны и гаджеты");
   const [isOpen, setIsOpen] = useState(false);
   const [subCtg, setSubCtg] = useState([]);
@@ -64,6 +66,10 @@ function Catalog() {
                       <li key={value} onClick={() => setCatalogMenu(element)}>
                         <button
                           onMouseOver={() => setCtgId(element?.id)}
+                          onClick={() => {
+                            setIsOpen(false);
+                            navigate("/Subcategory");
+                          }}
                           className={
                             "w-full flex items-center justify-between list-none py-5 px-4 mr-5 hover:bg-Cmain hover:text-Cwhites "
                           }
@@ -97,7 +103,7 @@ function Catalog() {
                     subCtg?.map((item, index) => (
                       <li className="my-6 text-Body text-xl">{item.name}</li>
                     ))} */}
-                    <li>{subCtg?.name}</li>
+                  <li>{subCtg?.name}</li>
                 </ul>
               </div>
             </div>

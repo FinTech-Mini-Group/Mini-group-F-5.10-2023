@@ -20,6 +20,7 @@ import Profil from "./components/profil/Profil";
 import PersonalInfo from "./components/profil/PersonalInfo";
 import Subcategory from "../src/landingpages/Subcategory";
 import Products from "./pages/Product";
+import Stock from "./components/Stock/Stock";
 
 function App() {
   const [activeTabs, setActiveTabs] = useState(false);
@@ -80,6 +81,7 @@ function App() {
             <Route path="/profil" element={<Profil />} />
             <Route path="/personalinfo:id" element={<PersonalInfo />} />
             <Route path="Subcategory" element={<Subcategory />} />
+            <Route path="Stock" element={<Stock />} />
           </Routes>
           <Footer />
           <button onClick={scrollTop} className={backTop}>
