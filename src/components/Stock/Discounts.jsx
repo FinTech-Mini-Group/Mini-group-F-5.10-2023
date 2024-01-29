@@ -26,7 +26,7 @@ function Discounts(props) {
           <p className='text-Bodybold mb-[50px]'>На товары со значком
             -15% скидка
             мы снизили цены. Просто потому что мы можем, а вам это нравится.</p>
-            <div className='flex justify-between mb-[50px]'>
+            <div className='lg:flex justify-between mb-[50px]'>
               <div>
                 <h2 className='text-subtitle mb-5'>Название категории</h2>
                 {
@@ -61,7 +61,7 @@ function Discounts(props) {
                 }
               </div>
             </div>
-            <div className='flex justify-between mb-[50px]'>
+            <div className='lg:flex justify-between mb-[50px]'>
               <div>
                 <h2 className='text-subtitle mb-5'>Название категории</h2>
                 {
@@ -96,7 +96,7 @@ function Discounts(props) {
                 }
               </div>
             </div>
-            <div className='flex justify-between mb-[50px]'>
+            <div className='lg:flex justify-between mb-[50px]'>
               <div>
                 <h2 className='text-subtitle mb-5'>Название категории</h2>
                 {

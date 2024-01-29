@@ -26,7 +26,7 @@ function Superprices(props) {
           <p className='text-Bodybold mb-[50px]'>Самые выгодные цены на нашем сайте собраны в одном месте! Выбирайте товары со значком
 Супер цена
 и будьте уверены в правильном выборе.</p>
-            <div className='flex justify-between mb-[50px]'>
+            <div className='lg:flex justify-between mb-[50px]'>
               <div>
                 <h2 className='text-subtitle mb-5'>Название категории</h2>
                 {
@@ -61,7 +61,7 @@ function Superprices(props) {
                 }
               </div>
             </div>
-            <div className='flex justify-between mb-[50px]'>
+            <div className='lg:flex justify-between mb-[50px]'>
               <div>
                 <h2 className='text-subtitle mb-5'>Название категории</h2>
                 {
@@ -96,7 +96,7 @@ function Superprices(props) {
                 }
               </div>
             </div>
-            <div className='flex justify-between mb-[50px]'>
+            <div className='lg:flex justify-between mb-[50px]'>
               <div>
                 <h2 className='text-subtitle mb-5'>Название категории</h2>
                 {

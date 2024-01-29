@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import Bulkprices from './Bulkprices';
 import Discounts from './Discounts';
+import Forbusiness from './Forbusiness';
 import Gifts from './Gifts';
 import Superprices from './Superprices';
+import Threebytwo from './threebytwo';
+import Volumediscount from './Volumediscount';
 
 
 
@@ -18,9 +21,9 @@ function Stock() {
     ]
     const[activeTabs, setActiveTabs] = useState("Оптовые цены");
   return (
-    <div className='container m-auto flex'>
-        <div className='w-[262px]'>
-            <h1 className='text-subtitle mb-8'>Акции</h1>
+    <div className='container m-auto lg:flex'>
+        <div className='lg:w-[262px]'>
+            <h1 className='lg:text-subtitle mb-8'>Акции</h1>
             <ul className='text-Bodybold '>
                 {
                     Stockmenu.map((element,value)=>{
@@ -37,6 +40,9 @@ function Stock() {
            <Discounts title = {activeTabs} /> 
            <Superprices title = {activeTabs}/> 
            <Gifts title = {activeTabs}/>
+           <Volumediscount title = {activeTabs}/>
+           <Forbusiness title = {activeTabs}/>
+           <Threebytwo title = {activeTabs}/> 
         </div>
 
     </div>

@@ -28,8 +28,8 @@ function Categorysex() {
         <div className={`${accordionOpen === 0 ? '' : 'hidden'}`}>
         <p className='text-subtitle mb-[10px]'>Только для юридических лиц и ИП</p>
         <p className='text-Body mb-[50px]'>Оптовая цена вступает в силу, когда в «Корзине» стоимость товаров с пометкой «Опт «Название категории»» превышает ??? ??? ??? сумов, дополнительная скидка при покупке:</p>
-        <div className='flex'>
-            <div className='mr-[600px]' >
+        <div className='lg:flex'>
+            <div className='lg:mr-[600px]' >
                <p className='text-Bodybold'>Сумма товаров</p>
                 {
                     price.map((element,index)=>(
