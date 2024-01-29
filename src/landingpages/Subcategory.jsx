@@ -2,6 +2,7 @@ import React from 'react'
 import ulchagich from "../assets/Group 262.png"
 import Atfirst from './Atfirst'
 import Products from '../pages/Product'
+import { Giftsmenu } from '../components/Stock/Gifts'
 
 
 function Subcategory() {
@@ -116,6 +117,7 @@ function Subcategory() {
           <div className=''>
           <Atfirst />
           </div>
+    
           <Products/>
         </div>
         </div>

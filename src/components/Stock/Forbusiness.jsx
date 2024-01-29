@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import knig from '../../assets/Rectangle 683.png'
 import cube from '../../assets/Rectangle 684.png'
 import bear from '../../assets/Rectangle 685.png'
@@ -9,6 +10,7 @@ export const Forbusmenu = [
     {img:bear, titles:'Скидки до 25% на мягкие игрушки', info:'За покупка спортивной одежды', much:'До 13 сентября' , gift:'Для бизнеса'},
 ]
 function Forbusiness(props) {
+   const navigate = useNavigate() 
   return (
     <div className={props.title === 'Для бизнеса' ? 'block' : 'hidden'}>
            <h1 className='text-TitleBold mb-[50px]'>Для бизнеса</h1>  
@@ -16,7 +18,7 @@ function Forbusiness(props) {
             {
                    Forbusmenu.map((element,value)=>(
                     <div className='bg-[#FAFAFA] rounded-[5px] border-2'>
-                        <img  className='mb-[10px]' src={element.img} alt="" />
+                        <img onClick={()=>navigate('Subcategory')} className='mb-[10px]' src={element.img} alt="" />
                         <h1 className='mb-[5px] px-5 text-subtitle'>{element.titles}</h1> 
                         <p className='text-Body text-brand px-5'>{element.info}</p> 
                         <div className='flex mt-[30px] px-5 '>

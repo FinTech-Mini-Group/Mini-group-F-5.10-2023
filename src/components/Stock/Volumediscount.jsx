@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import knig from '../../assets/Rectangle 683.png'
 import cube from '../../assets/Rectangle 684.png'
 import bear from '../../assets/Rectangle 685.png'
@@ -12,6 +13,7 @@ export const Valumemenu = [
    
 ]
 function Volumediscount(props) {
+    const navigate = useNavigate()
   return (
     <div className={props.title === 'Скидка за объём' ? 'block' : 'hidden'}>
         <h1 className='text-TitleBold mb-[50px]'>Скидка за объём</h1>
@@ -19,7 +21,7 @@ function Volumediscount(props) {
         {
            Valumemenu.map((element,value)=>(
                 <div className='bg-[#FAFAFA] rounded-[5px] border-2' key={value}>
-                    <img className='mb-[10px]' src={element.img} alt="" /> 
+                    <img onClick={()=>navigate('/Subcategory')} className='mb-[10px]' src={element.img} alt="" /> 
                     <h1 className='mb-[5px] px-5 text-subtitle'>{element.titles}</h1>    
                     <div className='flex mt-[30px] px-5 '>
                                 <p className='text-Bodybold'><span className='flex gap-3'>{icons.clock}{element.much}</span></p>
