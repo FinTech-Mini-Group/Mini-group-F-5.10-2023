@@ -32,7 +32,13 @@ export default function Electronic() {
   const { data: productes } = useProductsQuery();
 
   const handleAddBasket = (item) => {
-    setBasket([...basket, item]);
+    const isItemInBasket = basket.some((basketItem) => basketItem.id === item.id);
+  
+    if (isItemInBasket) {
+      alert('bu mahsulot bor');
+    } else {
+      setBasket([...basket, item]);
+    }
   };
 
   const { data: productInfo2 } = useProductInfoQuery(id);

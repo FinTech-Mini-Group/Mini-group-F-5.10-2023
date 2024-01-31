@@ -15,10 +15,16 @@ function Products() {
   const navigate = useNavigate();
   const { basket, setBasket } = useContext(Contexts);
   const { data: productes } = useProductsQuery();
-console.log(products);
-  const handleAddBasket = (item) => {
+console.log(productes?.Success);
+const handleAddBasket = (item) => {
+  const isItemInBasket = basket.some((basketItem) => basketItem.id === item.id);
+
+  if (isItemInBasket) {
+    alert('bu mahsulot bor');
+  } else {
     setBasket([...basket, item]);
-  };
+  }
+};
   
   return (
     <div className="Products">

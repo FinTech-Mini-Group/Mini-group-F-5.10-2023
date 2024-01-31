@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { FaTelegram, FaInstagram, FaFacebook } from 'react-icons/fa'; // Import your social icons
 import { Link } from 'react-router-dom';
 import { icons } from '../utilits/icons';
 import { networks } from '../utilits/footermenu';
@@ -18,15 +17,15 @@ const Networks = () => {
         {networks.map((element, index) => (
           <div
             key={index}
-            className='list-none mr-[30px] p-[10px] border-2 border-solid rounded-[20px]'
+            className={`list-none mr-[30px] p-[10px] border-2 border-solid rounded-[20px] ${activeIndex === index ? 'bg-gray-200' : ''}`}
           >
             <div onClick={() => toggleAccordion(index)}>
               {element.icons}
             </div>
-            {activeIndex === index && (
-              <Link href={element.href} className=''>
+            {activeIndex === index && element.href && (
+              <a href={element.href} rel="noopener noreferrer" target="_blank" className=''>
                 {element.icons}
-              </Link>
+              </a>
             )}
           </div>
         ))}

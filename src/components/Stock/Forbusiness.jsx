@@ -18,7 +18,7 @@ function Forbusiness(props) {
             {
                    Forbusmenu.map((element,value)=>(
                     <div className='bg-[#FAFAFA] rounded-[5px] border-2'>
-                        <img onClick={()=>navigate('Subcategory')} className='mb-[10px]' src={element.img} alt="" />
+                        <img onClick={()=>navigate('/Subcategory')} className='mb-[10px]' src={element.img} alt="" />
                         <h1 className='mb-[5px] px-5 text-subtitle'>{element.titles}</h1> 
                         <p className='text-Body text-brand px-5'>{element.info}</p> 
                         <div className='flex mt-[30px] px-5 '>
