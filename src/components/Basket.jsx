@@ -3,12 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { Contexts } from "../context/Contexts";
 import { useProductInfoQuery } from "../services/productApi";
 import BasketCardUi from "./BasketCardUi";
+import basketphoto from '../../src/assets/images.jpeg'
 
 function Basket() {
   const navigate = useNavigate();
   const { basket, Id, count, setBasket } = useContext(Contexts);
   const { data: productInfo } = useProductInfoQuery(Id);
-  const discPrice = productInfo?.Success?.disc_price;
+  const discPrice = productInfo?.Success?.disc_price || 0;
   const allPrice = Number(discPrice) * Number(count);
 
   const handleRemoveFromBasket = (itemId) => {
@@ -21,22 +22,30 @@ function Basket() {
       <h1 className="text-TitleBold my-8">Корзина</h1>
       <div className="lg:flex gap-8">
         <div className="p-7 border-[2px] border-solid rounded-[10px]  ">
-        <div className="lg:flex justify-between">
-  <div className="lg:flex">
-    <input className="mr-[20px] w-6" type="checkbox" />
-    <p className="text-subtitle">Выбрать всё</p>
-  </div>
-  <div>
-    <button onClick={() => handleRemoveFromBasket(element.id)} className="Bodybold">
-      Удалить
-    </button>
-  </div>
-</div>
+          <div className="lg:flex justify-between">
+            <div className="lg:flex">
+              <input className="mr-[20px] w-6" type="checkbox" />
+              <p className="text-subtitle">Выбрать всё</p>
+            </div>
+            <div>
+              {basket.length > 0 && (
+                <button onClick={() => handleRemoveFromBasket(basket[0].id)} className="Bodybold">
+                  Удалить
+                </button>
+              )}
+            </div>
+          </div>
+           <img src={basketphoto} alt="" />
           <div className="lg:flex ">
             <div className=" justify-arround mt-5">
               <div className="gap-30 ">
-                {basket.map((element, value) => (
-                  <BasketCardUi element={element} key={value} />
+                {basket.map((element) => (
+                  <div key={element.id}>
+                    <BasketCardUi element={element} key={element.id} />
+                    {/* <button onClick={() => handleRemoveFromBasket(element.id)} className="Bodybold">
+                      Удалить
+                    </button> */}
+                  </div>
                 ))}
               </div>
             </div>
@@ -53,7 +62,7 @@ function Basket() {
           <p className="my-8 text-Bodybld text-brand">Товары {basket.length} шт.</p>
           <button
             onClick={() => navigate("/zakaz")}
-            className="py-2 px-[16px] bg-bgmain rounded-[4px] text-Body  text-Cwhite w-[100%] mb-[30px]"
+            className="py-2 px-[16px] bg-bgmain rounded-[4px] text-Body text-Cwhite w-[100%] mb-[30px]"
           >
             Оформить заказ
           </button>
