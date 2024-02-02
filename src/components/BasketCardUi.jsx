@@ -6,7 +6,20 @@ import { Contexts } from "../context/Contexts";
 function BasketCardUi({ element }) {
   // const [count, setCount] = useState(1);
   const { setId, setCount, count } = useContext(Contexts);
+  const handleDecreaseCount = () => {
+    setCount((prevCounts) => ({
+      ...prevCounts,
+      [element.id]: Math.max((prevCounts[element.id] || 0) - 1, 0),
+    }));
+  };
 
+  const handleIncreaseCount = () => {
+    setCount((prevCounts) => ({
+      ...prevCounts,
+      [element.id]: (prevCounts[element.id] || 0) + 1,
+    }));
+  };
+  
   setId(element.id);
   return (
     <>
@@ -37,20 +50,16 @@ function BasketCardUi({ element }) {
                     </div> */}
         <div className="flex items-center">
           <button
-            onClick={() => {
-              if (count < 2) {
-                setCount(1);
-              } else setCount((p) => p - 1);
-            }}
+            onClick={handleDecreaseCount}
             className="py-2 px-4 bg-bgmain rounded-[4px] text-white mr-[10px]"
           >
             -
           </button>
           <button className="py-2 px-4 bg-white rounded-[4px] text-black border-[1px] border-solid text-Bodybold mr-[10px]">
-            {count}
+          {count[element.id] || 0}
           </button>
           <button
-            onClick={() => setCount((p) => p + 1)}
+            onClick={handleIncreaseCount}
             className="py-2 px-4 bg-bgmain rounded-[4px] text-white"
           >
             +

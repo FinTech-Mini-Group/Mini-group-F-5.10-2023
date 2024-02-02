@@ -15,16 +15,18 @@ function Products() {
   const navigate = useNavigate();
   const { basket, setBasket } = useContext(Contexts);
   const { data: productes } = useProductsQuery();
-console.log(productes?.Success);
-const handleAddBasket = (item) => {
-  const isItemInBasket = basket.some((basketItem) => basketItem.id === item.id);
+  const [isBasketVisible, setIsBasketVisible] = useState(true);
 
-  if (isItemInBasket) {
-    alert('bu mahsulot bor');
-  } else {
-    setBasket([...basket, item]);
-  }
-};
+  const handleAddBasket = (item) => {
+    const isItemInBasket = basket.some((basketItem) => basketItem.id === item.id);
+
+    if (isItemInBasket) {
+      alert('bu mahsulot bor');
+    } else {
+      setBasket([...basket, item]);
+      setIsBasketVisible(false); // Hide the basket photo when item is added to the basket
+    }
+  };
   
   return (
     <div className="Products">
@@ -63,7 +65,7 @@ const handleAddBasket = (item) => {
                   </p>
                   <p className=" mx-[10px] my-[10px] border-b-[1px]  w-[248px] bg-change"></p>
                   <div className="flex">
-                    <button
+                   <button
                       onClick={() => handleAddBasket(element)}
                       className=" flex p-[8px] rounded-[4px] bg-bgmain"
                     >

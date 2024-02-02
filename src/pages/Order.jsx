@@ -22,7 +22,7 @@ function Order() {
           </div>
           <div className="lg:col-span-1">
             <p className="py-2 px-4 border-2 border-solid rounded-[4px] text-Bodybold inline-block">
-              {count}
+            {count[element.id] || 0}
             </p>
           </div>
           <div className="col-span-2">
