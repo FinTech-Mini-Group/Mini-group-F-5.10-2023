@@ -52,7 +52,7 @@ function Catalog() {
       <div className="">
         <button
           onClick={() => setIsOpen((p) => !p)}
-          className=" bg-[#00B709] flex text-white gap-2 py-2 px-4 rounded-md items-center "
+          className="  bg-[#00B709] flex text-white gap-2 py-2 px-4 rounded-md items-center "
         >
           {isOpen ? icons.close : icons.menu}Каталог
         </button>

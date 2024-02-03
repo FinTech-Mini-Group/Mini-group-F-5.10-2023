@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { products } from "../landingpages/data";
 import { icons } from "../utilits/icons";
@@ -10,7 +10,7 @@ import axios from "axios";
 import { BASE_URL } from "../utilits/constant";
 import { useProductsQuery } from "../services/productApi";
 import { Contexts } from "../context/Contexts";
-
+import love from '../../src/assets/lovess.png'
 function Products() {
   const navigate = useNavigate();
   const { basket, setBasket } = useContext(Contexts);
@@ -28,11 +28,13 @@ function Products() {
     }
   };
   
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="Products">
       <Swiper spaceBetween={30} slidesPerView={4} className="mySwiper">
         {productes &&
-          productes?.Success.map((element, value) => (
+          productes?.Success.map((element,value) => (
             <>
               <SwiperSlide>
                 <div
@@ -74,8 +76,8 @@ function Products() {
                         В корзину
                       </span>
                     </button>
-                    <button className="p-[8px] rounded-[4px] border-[1px] border-solid ml-[20px]">
-                      {icons.heart}
+                    <button onClick={()=>setIsOpen((p) => !p)} className="p-[8px] rounded-[4px] border-[1px] border-solid ml-[20px]">
+                      {isOpen ? icons.heart : <img className="w-[24px] h-[24px]" src={love} alt="" /> }
                     </button>
                   </div>
                 </div>

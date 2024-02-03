@@ -48,9 +48,9 @@ function Basket() {
                 {basket.map((element) => (
                   <div key={element.id}>
                     <BasketCardUi element={element} key={element.id} />
-                    {/* <button onClick={() => handleRemoveFromBasket(element.id)} className="Bodybold">
+                    <button onClick={() => handleRemoveFromBasket(element.id)} className="Bodybold">
                       Удалить
-                    </button> */}
+                    </button>
                   </div>
                 ))}
               </div>

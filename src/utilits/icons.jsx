@@ -189,4 +189,5 @@ clock : (<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox=
 <path d="M15.7099 15.1798L12.6099 13.3298C12.0699 13.0098 11.6299 12.2398 11.6299 11.6098V7.50977" stroke="#171515" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>),
 
+
 }

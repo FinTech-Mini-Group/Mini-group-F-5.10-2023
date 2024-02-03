@@ -2,13 +2,16 @@ import React, { useContext } from "react";
 import { zakaz } from "../landingpages/data";
 import { Contexts } from "../context/Contexts";
 import { BASE_URL } from "../utilits/constant";
+import { useNavigate } from "react-router-dom";
+
 function Order() {
   const { basket, count } = useContext(Contexts);
+  const navigate = useNavigate()
   return (
     <div className="py-10">
       <div className="lg:flex justify-between">
         <h2 className="text-subtitle text-subtitles">Ваш заказ</h2>
-        <h3 className="text-Body text-[#999999]">Изменить</h3>
+        <button onClick={()=>navigate('/Basket')} className="text-Body text-[#999999]">Изменить</button>
       </div>
       {basket?.map((element, value) => (
         <div className="lg:grid lg:grid-cols-9 items-center mt-5" key={value}>
