@@ -30,7 +30,7 @@ export default function Electronic() {
   const [productInfo1, setProductInfo1] = useState();
   const { basket, setBasket } = useContext(Contexts);
   const { data: productes } = useProductsQuery();
-
+  
   const handleAddBasket = (item) => {
     const isItemInBasket = basket.some((basketItem) => basketItem.id === item.id);
   
@@ -54,7 +54,7 @@ export default function Electronic() {
   console.log(allPrice);
   console.log(productInfo1);
   console.log(productInfo2?.Success);
-
+  const [isOpen , setIsOpen]= useState(false)
   return (
     <div className="container m-auto">
       <h1 className="text-subtitle">{productInfo2?.Success?.title}</h1>
@@ -162,7 +162,7 @@ export default function Electronic() {
             <div className="flex items-center">
               <p className="text-subtitle mr-[73px]">{allPrice}сум</p>
               <Share />
-              <button className="p-[10px] border-[1px] border-solid rounded-[4px]">
+              <button onClick={()=>isOpen()} className="p-[10px] border-[1px] border-solid rounded-[4px]">
                 {icons.heart}
               </button>
             </div>

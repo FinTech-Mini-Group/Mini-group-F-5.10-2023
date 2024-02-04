@@ -29,7 +29,7 @@ function Products() {
   };
   
   const [isOpen, setIsOpen] = useState(false);
-
+  const [isOpenArray, setIsOpenArray] = useState(Array(productes?.Success.length).fill(false));
   return (
     <div className="Products">
       <Swiper spaceBetween={30} slidesPerView={4} className="mySwiper">
@@ -76,8 +76,17 @@ function Products() {
                         В корзину
                       </span>
                     </button>
-                    <button onClick={()=>setIsOpen((p) => !p)} className="p-[8px] rounded-[4px] border-[1px] border-solid ml-[20px]">
-                      {isOpen ? icons.heart : <img className="w-[24px] h-[24px]" src={love} alt="" /> }
+                    <button
+                      onClick={() => {
+                        setIsOpenArray((prev) => {
+                          const newArray = [...prev];
+                          newArray[value] = !newArray[value];
+                          return newArray;
+                        });
+                      }}
+                      className="p-[8px] rounded-[4px] border-[1px] border-solid ml-[20px]"
+                    >
+                      {isOpenArray[value] ? icons.heart : <img className="w-[24px] h-[24px]" src={love} alt="" />}
                     </button>
                   </div>
                 </div>
