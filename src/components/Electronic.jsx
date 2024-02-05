@@ -6,7 +6,7 @@ import product4 from "../assets/Rectangle 625.png";
 import product5 from "../assets/Rectangle 627.png";
 import { icons } from "../utilits/icons";
 import Description from "./Description";
-import Question from "./Question";
+import Question from "./Question/Question";
 import Reviews from "./Reviews";
 import Share from "./Share";
 import Character from "./Сharacter";
@@ -15,6 +15,7 @@ import { BASE_URL } from "../utilits/constant";
 import axios from "axios";
 import { useProductInfoQuery, useProductsQuery } from "../services/productApi";
 import { Contexts } from "../context/Contexts";
+import love from '../../src/assets/lovess.png'
 
 export default function Electronic() {
   const tabsMenu = [
@@ -162,8 +163,8 @@ export default function Electronic() {
             <div className="flex items-center">
               <p className="text-subtitle mr-[73px]">{allPrice}сум</p>
               <Share />
-              <button onClick={()=>isOpen()} className="p-[10px] border-[1px] border-solid rounded-[4px]">
-                {icons.heart}
+              <button onClick={()=>setIsOpen((p=>(!p)))} className="p-[10px] border-[1px] border-solid rounded-[4px]">
+                {isOpen?  <img className="w-[24px] h-[24px]" src={love} alt="" />: icons.heart }
               </button>
             </div>
             <p className="text-Bodystrik line-through">

@@ -86,7 +86,7 @@ function Products() {
                       }}
                       className="p-[8px] rounded-[4px] border-[1px] border-solid ml-[20px]"
                     >
-                      {isOpenArray[value] ? icons.heart : <img className="w-[24px] h-[24px]" src={love} alt="" />}
+                      {isOpenArray[value] ?   <img className="w-[24px] h-[24px]" src={love} alt="" />:icons.heart}
                     </button>
                   </div>
                 </div>

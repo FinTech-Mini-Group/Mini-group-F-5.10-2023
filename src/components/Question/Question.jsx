@@ -1,12 +1,18 @@
-import React from 'react'
-import Footer from '../landingpages/Footer'
-import Products from '../pages/Product'
-import { icons } from '../utilits/icons'
+import React, { useState } from 'react'
+import Footer from '../../landingpages/Footer'
+import Products from '../../pages/Product'
+import { icons } from '../../utilits/icons'
+import Questionpop from './Questionpop'
 
 export default function Question(props) {
+  const [showmodal , setShowModal] = useState(false)
+  const handleOnclose = () => setShowModal(false)
   return (
     <div className={props.title === 'Вопросы (2)' ? 'block' : 'hidden'}>
+      <div className='flex items-center justify-between'>
       <h1 className='text-Bodybold mb-5'>Если у вас есть какие-нибудь вопросы отправьте, мы ответим</h1>
+      <button onClick={()=>setShowModal(true)}  className='py-2 px-4 bg-Cmain rounded-[4px] text-Cwhite'>Задать вопрос</button>
+      </div>
       <div className='my-[10px] lg:ml-[100px] mr-[30px] '>
         <div className='lg:flex items-start mb-5'>
            <div className=''>
@@ -71,6 +77,7 @@ export default function Question(props) {
           <button className='p-2  rounded-[4px]  bg-[#6EFF75] ml-5'>{icons.arrowr}</button>
           </div>
           </div>
+          <Questionpop onClose={handleOnclose} visible={showmodal}/>
           <Products/>
        
     </div>
