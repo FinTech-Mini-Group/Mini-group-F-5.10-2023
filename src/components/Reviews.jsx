@@ -11,8 +11,8 @@ function Reviews(props) {
     <div className={props.title === 'Отзывы покупателей (21)' ? 'block' : 'hidden'}>
        <div className='lg:flex'>
         <h1 className='text-Bodybold lg:mr-[700px]'>Здесь пока нет комментарий, будьте первыми!</h1>
-        
-       </div><button onClick={()=>setShowModal(true)} className='flex py-2 px-4 bg-bgmain rounded-[4px] text-Body text-Cwhite'><span className='mr-[10px]'>{icons.magicpen}</span>Оставить</button>
+        <button onClick={()=>setShowModal(true)} className='flex py-2 px-4 bg-bgmain rounded-[4px] text-Body text-Cwhite'><span className='mr-[10px]'>{icons.magicpen}</span>Оставить</button>
+       </div>
        <div className='lg:flex mt-[40px]'>
         <div className='mr-[200px]'>
             <h1 className='text-Bodybold mb-[20px]'>Gulnoza</h1>

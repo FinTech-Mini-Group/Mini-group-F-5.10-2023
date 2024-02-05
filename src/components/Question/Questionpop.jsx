@@ -13,7 +13,7 @@ if (!visible) return null;
                     <textarea className='py-4 px-5 border-[2px] border-solid rounded-[4px] text-Body text-brand ' name="" id="" cols="30" rows="10">Отзыв*</textarea> 
             </form>   
             <button className='py-2 px-4 border-[2px] border-solid bg-bgmain rounded-[4px] text-Body text-Cwhite w-[100%] mt-[20px]'>Задать вопрос</button>  
-            <button onClick={onClose}>CLOSE</button>
+            <button className='mt-5' onClick={onClose}>CLOSE</button>
         </div>
     </div>
   )
