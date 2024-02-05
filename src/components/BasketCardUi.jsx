@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { BASE_URL } from "../utilits/constant";
 import { useContext } from "react";
 import { Contexts } from "../context/Contexts";
+import { icons } from "../utilits/icons";
 
 function BasketCardUi({ element }) {
   // const [count, setCount] = useState(1);
-  const { setId, setCount, count } = useContext(Contexts);
+  const { setId, setCount, count, handleRemoveFromBasket } = useContext(Contexts);
   const handleDecreaseCount = () => {
     setCount((prevCounts) => ({
       ...prevCounts,
@@ -69,6 +70,9 @@ function BasketCardUi({ element }) {
         <div className="">
           <h2 className="font-bold text-2xl">{element?.disc_price} сум</h2>
         </div>
+        <button onClick={() => handleRemoveFromBasket(element.id)} className="Bodybold">
+            {icons.deletes}
+          </button>
       </div>
     </>
   );

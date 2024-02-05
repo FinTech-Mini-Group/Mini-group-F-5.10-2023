@@ -4,6 +4,7 @@ import { Contexts } from "../context/Contexts";
 import { useProductInfoQuery } from "../services/productApi";
 import BasketCardUi from "./BasketCardUi";
 import basketphoto from '../../src/assets/images.jpeg'
+import { icons } from "../utilits/icons";
 
 function Basket() {
   const navigate = useNavigate();
@@ -48,9 +49,9 @@ function Basket() {
                 {basket.map((element) => (
                   <div key={element.id}>
                     <BasketCardUi element={element} key={element.id} />
-                    <button onClick={() => handleRemoveFromBasket(element.id)} className="Bodybold">
-                      Удалить
-                    </button>
+                    {/* <button onClick={() => handleRemoveFromBasket(element.id)} className="Bodybold">
+                      {icons.deletes}
+                    </button> */}
                   </div>
                 ))}
               </div>

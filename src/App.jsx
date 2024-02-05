@@ -29,6 +29,14 @@ function App() {
   const [basket, setBasket] = useState([])
   const [count, setCount] = useState(1);
   const [Id,setId]=useState(0)
+  const handleRemoveFromBasket = (itemId) => {
+    setBasket((prevBasket) => prevBasket.filter(item => item.id !== itemId));
+    setCount((prevCounts) => {
+      const newCounts = { ...prevCounts };
+      delete newCounts[itemId];
+      return newCounts;
+    });
+  }; 
  
     const [backTop, setBackTop] = useState(
     "fixed bottom-[-50px] sm:bottom-[-100px] right-[100px] w-[45px] h-[45px] sm:w-[60px] sm:h-[60px] rounded-full "
@@ -65,7 +73,8 @@ function App() {
             basket,
             setBasket,
             Id,setId,
-            count, setCount
+            count, setCount,
+            handleRemoveFromBasket, 
           }}
         >
           <Header />
