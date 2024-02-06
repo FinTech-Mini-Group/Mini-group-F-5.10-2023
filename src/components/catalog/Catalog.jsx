@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import BeautyHealth from "./BeautyHealth";
 import ChildrenProducts from "./ChildrenProducts";
 import ComputerTechnology from "./ComputerTechnology";
@@ -16,6 +16,7 @@ import { useCategorysQuery } from "../../services/categoryApi";
 import axios from "axios";
 import { BASE_URL } from "../../utilits/constant";
 import { useNavigate } from "react-router-dom";
+import { Contexts } from "../../context/Contexts";
 
 function Catalog() {
   const { data: categories } = useCategorysQuery();
@@ -36,13 +37,13 @@ function Catalog() {
   ];
   const navigate = useNavigate();
   const [activeCatalogMenu, setCatalogMenu] = useState("Телефоны и гаджеты");
-  const [isOpen, setIsOpen] = useState(false);
+  const { openCatalog, setCatalog } = useContext(Contexts);
   const [subCtg, setSubCtg] = useState([]);
 
   useEffect(() => {
     axios
       .get(`${BASE_URL}/app/ctg/${ctgId}/`)
-      .then((res) => setSubCtg(res?.data?.Success))
+      .then((res) => setSubCtg(res?.data?.Success?.subctg_set))
       .catch((err) => console.log(err));
   }, [ctgId]);
   console.log(subCtg);
@@ -51,12 +52,12 @@ function Catalog() {
     <>
       <div className="">
         <button
-          onClick={() => setIsOpen((p) => !p)}
-          className="  bg-[#00B709] flex text-white gap-2 py-2 px-4 rounded-md items-center "
+          onClick={() => setCatalog((p) => !p)}
+          className="  bg-[#00B709] text-white gap-2 py-2 px-4 rounded-md items-center md:flex hidden"
         >
-          {isOpen ? icons.close : icons.menu}Каталог
+          {openCatalog ? icons.close : icons.menu}Каталог
         </button>
-        {isOpen && (
+        {openCatalog && (
           <div className="w-full m-auto bg-white absolute z-50 rounded-[10px] p-0 left-0">
             <div className="flex mb-[100px] container">
               <div className="">
@@ -67,7 +68,7 @@ function Catalog() {
                         <button
                           onMouseOver={() => setCtgId(element?.id)}
                           onClick={() => {
-                            setIsOpen(false);
+                            setCatalog(false);
                             navigate("/Subcategory");
                           }}
                           className={
@@ -98,12 +99,14 @@ function Catalog() {
                 </ul>
               </div>
               <div className="px-14">
-                <ul>
+                <ul className="p-10">
                   {/* {subCtg &&
                     subCtg?.map((item, index) => (
                       <li className="my-6 text-Body text-xl">{item.name}</li>
                     ))} */}
-                  <li>{subCtg?.name}</li>
+                  {subCtg?.map((element, index) => (
+                    <li>{element.name}</li>
+                  ))}
                 </ul>
               </div>
             </div>

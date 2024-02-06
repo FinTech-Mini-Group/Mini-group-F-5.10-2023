@@ -21,24 +21,27 @@ import PersonalInfo from "./components/profil/PersonalInfo";
 import Subcategory from "../src/landingpages/Subcategory";
 import Products from "./pages/Product";
 import Stock from "./components/Stock/Stock";
+import Menu from "./components/menu/Menu";
 
 function App() {
   const [activeTabs, setActiveTabs] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [basket, setBasket] = useState([])
+  const [openCatalog, setCatalog] = useState(false);
+
+  const [basket, setBasket] = useState([]);
   const [count, setCount] = useState(1);
-  const [Id,setId]=useState(0)
+  const [Id, setId] = useState(0);
   const handleRemoveFromBasket = (itemId) => {
-    setBasket((prevBasket) => prevBasket.filter(item => item.id !== itemId));
+    setBasket((prevBasket) => prevBasket.filter((item) => item.id !== itemId));
     setCount((prevCounts) => {
       const newCounts = { ...prevCounts };
       delete newCounts[itemId];
       return newCounts;
     });
-  }; 
- 
-    const [backTop, setBackTop] = useState(
+  };
+
+  const [backTop, setBackTop] = useState(
     "fixed bottom-[-50px] sm:bottom-[-100px] right-[100px] w-[45px] h-[45px] sm:w-[60px] sm:h-[60px] rounded-full "
   );
   const scrollTop = () => {
@@ -62,7 +65,6 @@ function App() {
   console.log(basket);
   return (
     <>
-      
       <div className="font-rl">
         <Contexts.Provider
           value={{
@@ -72,9 +74,13 @@ function App() {
             setIsOpen,
             basket,
             setBasket,
-            Id,setId,
-            count, setCount,
-            handleRemoveFromBasket, 
+            Id,
+            setId,
+            count,
+            setCount,
+            handleRemoveFromBasket,
+            openCatalog,
+            setCatalog,
           }}
         >
           <Header />
@@ -96,6 +102,7 @@ function App() {
           <button onClick={scrollTop} className={backTop}>
             {icons.up}
           </button>
+          <Menu />
         </Contexts.Provider>
       </div>
     </>
