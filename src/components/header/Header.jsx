@@ -64,7 +64,7 @@ function Header() {
           </div>
           <button
             onClick={() => {
-              navigate(token ? "/profil" : "/signin");
+              navigate(token ? "/main" : "/signin");
             }}
             className="border-2 border-[#00B709] py-2 px-4 rounded-md text-[#00B709] flex gap-2  items-center"
           >

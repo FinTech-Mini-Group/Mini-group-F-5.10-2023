@@ -22,6 +22,7 @@ import Subcategory from "../src/landingpages/Subcategory";
 import Products from "./pages/Product";
 import Stock from "./components/Stock/Stock";
 import Menu from "./components/menu/Menu";
+import Main from "./components/profil/Main";
 
 function App() {
   const [activeTabs, setActiveTabs] = useState(false);
@@ -97,6 +98,7 @@ function App() {
             <Route path="/personalinfo:id" element={<PersonalInfo />} />
             <Route path="Subcategory" element={<Subcategory />} />
             <Route path="Stock" element={<Stock />} />
+            <Route path="/main" element={<Main/>}/>
           </Routes>
           <Footer />
           <button onClick={scrollTop} className={backTop}>

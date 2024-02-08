@@ -2,10 +2,11 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { icons } from '../../utilits/icons'
 
-function Profil() {
+function Profil(props) {
   const navigate=useNavigate();
   return (
-    <div className='lg:m-[100px]'>
+    <div className={props.title === 'Главное' ? 'block' : 'hidden'}>
+    <div className='container m-auto'>
         <div className='lg:flex gap-8 justify-between'>
             <div className='p-6 border border-change rounded-md lg:w-[600px] '>
               <div className='flex gap-5'>
@@ -17,7 +18,6 @@ function Profil() {
               <p className='text-brand text-Body'>Номер телефона</p>
               <p className='text-Bodybold'>+998 99 123 45 67</p>
               </div>
-
             </div>
             <div className='bg-Crect p-6 border-change rounded-md lg:w-[600px]'>
               <div className='flex  gap-3'>
@@ -61,6 +61,7 @@ function Profil() {
           <button className='text-subtitle bg-Crect border border-[#CCC] rounded-lg px-8 py-4'>Выйти из системы</button>
           <button className=' !text-Cwhite text-subtitle bg-bgmain border border-[#CCC] rounded-lg px-8 py-4'>Сохранить изменение</button>
         </div>
+    </div>
     </div>
   )
 }

@@ -44,7 +44,7 @@ export default {
           fontWeight: 400,
           letterSpacing: 0
         }],
-        subtitle: ['24px', {
+        subtitless: ['24px', {
           fontWeight: 600,
           letterSpacing: 0
         }],
@@ -56,6 +56,11 @@ export default {
           fontWeight: 700,
           letterSpacing: 0
         }],
+        Rale: ['21px', {
+          fontWeight: 600,
+          letterSpacing: 0
+        }],
+        
         Bodystrik: ['16px', {
           fontWeight: 500,
           letterSpacing: 0

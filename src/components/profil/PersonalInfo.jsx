@@ -3,13 +3,13 @@ import { useState } from 'react'
 import { icons } from '../../utilits/icons'
 import BankCard from './BankCard'
 
-function PersonalInfo() {
+function PersonalInfo(props) {
    const [showmodalka , setShowModalka] = useState(false)
    const handleClose = () => setShowModalka(false)
   return (
-    <div className='lg:m-[100px]'>
-      <div>
-      <div className='p-6 border border-change rounded-md   '>
+    <div className={props.title === 'Профиль' ? 'block' : 'hidden'}>
+      <div className='container m-auto'>
+      <div className='p-6 border border-change rounded-md '>
               <div className='flex gap-5 '>
               <button>{icons.profil}</button>
               <p className='pt-10 text-subtitle' >Имя не указано</p>
