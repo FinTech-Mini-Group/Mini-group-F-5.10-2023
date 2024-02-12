@@ -11,11 +11,11 @@ function News() {
   return (
     <div className=' lg:container lg:my-[50px] lg:w-full lg:flex justify-center gap-8 m-auto'>
         <div className='lg:w-full'>
-            <h1 className=' text-subtitle lg:text-Cback lg:text-subtitle lg:mb-[30px] lg:text-start '>Будьте в курсе происходящего</h1>
+            <h1 className=' text-subtitle lg:text-Cback lg:text-subtitless lg:mb-[30px] lg:text-start '>Будьте в курсе происходящего</h1>
            <Carousel/>
         </div>
         <div>
-           <h2 className=' text-center lg:text-subtitle text-Cback mb-7 lg:text-start'>Товары дня</h2> 
+           <h2 className=' text-center lg:text-subtitless text-Cback mb-7 lg:text-start'>Товары дня</h2> 
            <Carouseltwo/> 
         </div>
     </div>
