@@ -187,7 +187,7 @@ export default function Electronic() {
                 <span className="mr-[12px]">{icons.shoppingcart}</span>Добавить
                 в корзину
               </button>
-              <button className="border-[1px] border-solid border-[#00B709] rounded-[4px] py-2 lg:px-[128px] text-Cmain mt-5">
+              <button className="border-[1px] border-solid border-[#00B709] rounded-[4px] py-2 lg:px-[126px] text-Cmain mt-5">
                 Купить сейчас
               </button>
             </div>
