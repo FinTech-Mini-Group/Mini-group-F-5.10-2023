@@ -15,7 +15,7 @@ function Total() {
     <div className='py-5 px-[30px] border-2 border-solid rounded-[10px] w-full lg:h-full'>
       <div className='lg:flex items-center'>
         <h1 className='text-TitleBold lg:mr-8'>Итого:</h1>
-        <p className='text-subtitle !text-Cmain mr-[5px]'>
+        <p className='text-subtitless !text-Cmain mr-[5px]'>
         {calculateTotalPrice()} <span className='text-Bodybold text-black'>сум</span>
         </p>
       </div>

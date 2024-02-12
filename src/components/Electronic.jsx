@@ -161,7 +161,7 @@ export default function Electronic() {
         <div>
           <div className="p-[20px] border-[1px] border-solid rounded-[4px] lg:w-[407px]">
             <div className="flex items-center">
-              <p className="text-subtitle mr-[73px]">{allPrice}сум</p>
+              <p className="text-subtitless mr-[73px]">{allPrice}сум</p>
               <Share />
               <button onClick={()=>setIsOpen((p=>(!p)))} className="p-[10px] border-[1px] border-solid rounded-[4px]">
                 {isOpen?  <img className="w-[24px] h-[24px]" src={love} alt="" />: icons.heart }

@@ -10,7 +10,7 @@ function Order() {
   return (
     <div className="py-10">
       <div className="lg:flex justify-between">
-        <h2 className="text-subtitle text-subtitles">Ваш заказ</h2>
+        <h2 className="text-subtitless text-subtitles">Ваш заказ</h2>
         <button onClick={()=>navigate('/Basket')} className="text-Body text-[#999999]">Изменить</button>
       </div>
       {basket?.map((element, value) => (
@@ -29,7 +29,7 @@ function Order() {
             </p>
           </div>
           <div className="col-span-2">
-            <p className="text-subtitle">
+            <p className="text-subtitless">
               {element.disc_price} <span className="text-Bodybold">сум</span>
             </p>
           </div>

@@ -62,7 +62,7 @@ function Products() {
                   <p className="text-Bodystrik text-[#999] line-through ">
                     {element.price} сум
                   </p>
-                  <p className="text-subtitle !text-[#00B709]">
+                  <p className="text-subtitless !text-[#00B709]">
                     {element.disc_price}сум
                   </p>
                   <p className=" mx-[10px] my-[10px] border-b-[1px]  w-[248px] bg-change"></p>

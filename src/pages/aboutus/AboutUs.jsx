@@ -19,7 +19,7 @@ function AboutUs() {
 
     <div className="container m-auto">
       <div className="lg:mx-[60px] lg:my-[50px] ">
-        <h1 className="py-2 pl-10 font-rl text-subtitle">О нас</h1>
+        <h1 className="py-2 pl-10  text-subtitless">О нас</h1>
         <div className="lg:px-[100px]">
           <div className=" bg-computerimage w-full h-full lg:bg-computerimage bg-cover  lg:h-[680px] pt-25 mt-[30px]">
             <h2 className=" py-4 px-6 text-[20px] text-white font-rl lg:pt-[100px] lg:pl-[100px] lg:text-[24px]  ">
@@ -58,7 +58,7 @@ function AboutUs() {
       </div>
 
       <div className=" container m-auto lg:mb-[100px]">
-        <h1 className="text-Bold">Наши партнеры</h1>
+        <h1 className="text-Instruct">Наши партнеры</h1>
         <div className=" mt-[35px] lg:grid grid-cols-6 gap-[30px] ">
           <div className="bg-white flex items-center justify-center py-[93px] border border-bggrey rounded-[10px]">
             <img src={Google} alt="" />
@@ -86,7 +86,7 @@ function AboutUs() {
       <Change/>
 
       <div className="container m-auto ">
-        <h1 className="text-Bold">Новости</h1>
+        <h1 className="text-Instruct">Новости</h1>
 
         
         <div className=" mt-[35px] lg:grid grid-cols-5 gap-[30px] ">

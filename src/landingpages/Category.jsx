@@ -29,7 +29,7 @@ function Category() {
             categories && res.map((element, value) =>
               <div className='' key={value}>
                 <img className='w-[262px] h-[262px] rounded-[10px]' src={element.images || Img1} alt="img" />
-                <p className=' mb-[50px] lg:text-center mt-[10px] text-subtitle text-[#000000]'>{element.name}</p>
+                <p className=' mb-[50px] lg:text-center mt-[10px] text-subtitless text-[#000000]'>{element.name}</p>
               </div>
             )}
         </div>   

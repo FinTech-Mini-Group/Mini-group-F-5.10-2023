@@ -62,7 +62,7 @@ function Basket() {
         <div className="border-[2px] border-solid rounded-[10px] py-5 px-8 lg:w-[400px] h-full">
             <div className="lg:flex justify-between items-center">
               <h2 className="text-TitleBold">Итого:</h2>
-              <p className="text-subtitle !text-Cmain">
+              <p className="text-subtitless !text-Cmain">
                 {calculateTotalPrice()} <span className="!text-Bodybold text-black">сум</span>
               </p>
             </div>
