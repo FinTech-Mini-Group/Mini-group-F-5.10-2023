@@ -1,0 +1,15 @@
+.Products .swiper-slide {
+    font-size: 18px;
+    background: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 344px !important;
+  
+
+}
+
+.Products .swiper-wrapper {
+    width: auto !important;
+}
