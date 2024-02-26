@@ -45,14 +45,14 @@ function Registrations() {
   return (
     <div className="container m-auto ">
       <div className="my-[50px] p-8 border-[2px] border-solid rounded-[10px]  bg-Crect lg:w-[450px] m-auto">
-        <h1 className="text-subtitle mb-[30px]">Зарегистрируйтесь в системе</h1>
+        <h1 className="text-subtitless mb-[30px]">Зарегистрируйтесь в системе</h1>
         <form className="grid gap-5 " onSubmit={handleSubmit} action="">
           <input
             onChange={(e) => setPhone(e.target.value)}
             value={phone}
             required
             className="py-4 px-5 text-Body text-brand rounded-[4px]"
-            type="text"
+            type="number"
             placeholder="Ваш номер телефона"
           />
           <div className=" relative bg-white py-4 px-5 text-Body text-brand rounded-[4px] ">

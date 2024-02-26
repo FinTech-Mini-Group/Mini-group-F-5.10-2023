@@ -36,7 +36,7 @@ function Signin() {
   return (
     <div className=" container m-auto">
       <div className="p-8 border-[2px] border-solid rounded-[10px] mt-[50px] mb-[34px] bg-Crect lg:w-[500px] m-auto">
-        <h1 className="text-subtitle mb-[30px] text-center">
+        <h1 className="text-subtitless mb-[30px] text-center">
           Войдите в свою учетную запись
         </h1>
         <form className="grid gap-5" onSubmit={handleSubmit}>
@@ -45,7 +45,7 @@ function Signin() {
             value={phone}
             required
             className="py-4 px-5 text-Body text-brand rounded-[4px]"
-            type="text"
+            type="number"
             placeholder="номер телефона"
           />
           <div className="relative py-4 bg-white px-5 text-Body text-brand rounded-[4px] w-full">
