@@ -23,12 +23,12 @@ function Stock() {
   return (
     <div className='container m-auto lg:flex'>
         <div className='lg:w-[262px]'>
-            <h1 className='lg:text-subtitle mb-8'>Акции</h1>
+            <h1 className='lg:text-subtitless mb-8'>Акции</h1>
             <ul className='text-Bodybold '>
                 {
                     Stockmenu.map((element,value)=>{
                         return (
-                            <li  className='mb-5 hover:text-Cmain' key={value} onClick={()=>setActiveTabs(element)}>{element}</li>
+                            <li  className='mb-5 hover:text-Cmain' key={value} onMouseEnter={()=>setActiveTabs(element)}>{element}</li>
                         )
                     })
                 }

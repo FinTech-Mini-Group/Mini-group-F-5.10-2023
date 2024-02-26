@@ -5,7 +5,7 @@ import { ekonom } from './data'
 function Change() {
   return (
     <div className='  lg:mb-[50px] m-auto lg:px-[100px] bg-change '>
-        <div className='lg:flex justify-center  lg:py-[75px]  gap-5 '>
+        <div className='lg:grid grid-cols-5  lg:py-[75px]  gap-5 '>
            
            {
               ekonom.map((element,value)=>

@@ -6,10 +6,18 @@
     justify-content: center;
     align-items: center;
     width: 344px !important;
-  
-
 }
+
 
 .Products .swiper-wrapper {
     width: auto !important;
 }
+
+@media (max-width: 320px) {
+    .Products .swiper-slide {
+      display: grid !important;
+      width: auto !important; /* Set width to auto for screens less than or equal to 320px */
+      display: block; /* Change display to block for screens less than or equal to 320px */
+      font-size: 16px; /* Optionally adjust font size for smaller screens */
+    }
+  }
